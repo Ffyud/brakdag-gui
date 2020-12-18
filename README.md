@@ -2,7 +2,7 @@
 
 Brakdag verzamelt nieuws van diverse nieuwsbronnen uit de stad Groningen.
 
-### De Brakdag API
+<!-- ### De Brakdag API
 
 Artikelen en bronnen staan opgeslagen in een database, welke wordt onsloten via een aantal endpoints. Er is bijvoorbeeld een endpoint om 
 artikelen op te halen voor een bepaalde datum of een endpoint om alle bronnen die Brakdag kent te tonen. Ook via de API worden er
@@ -34,4 +34,4 @@ Deze parser is geschreven in Python.
 De artikelen die ontsloten worden via de API plaatsen we in een leesbare en vriendelijke manier op de Brakdag website. Dit is
 wat de gebruiker uiteindelijk te zien krijgt.
 
-De front-end is opgezet met de Javascriptbibliotheek React.
+De front-end is opgezet met de Javascriptbibliotheek React. -->
