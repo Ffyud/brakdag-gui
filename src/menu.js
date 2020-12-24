@@ -12,7 +12,6 @@ import CijfersPagina from './cijfers-pagina.js';
 import ZoekVeld from './zoek-veld.js';
 import ZoekPagina from './zoek-pagina.js';
 
-
 export default function BrakdagMenu() {
     return (
         <Router>
@@ -21,19 +20,7 @@ export default function BrakdagMenu() {
                     <li>
                         <Link to="/"><div id="logo">Brakdag</div></Link>
                     </li>
-                    {/* <li>
-                        <div id="datum">
-                            25<br/>NOV
-                        </div>
-                    </li> */}
-                    {/* <li>
-                        <Link to="/uitgelicht">Uitgelicht</Link>
-                    </li> */}
-                    <li>
-                        <Link to="/cijfers"><i className="ri-bar-chart-box-line"></i></Link>
-                    </li>
                     <li><ZoekVeld/></li>
-                    <li><Link to="/zoeken">tijdelijk zoekknop</Link></li>
                     <li>
                         <Link to="/info"><i className="ri-information-line"></i></Link>
                     </li>
@@ -46,11 +33,11 @@ export default function BrakdagMenu() {
                 <Route exact path="/uitgelicht">
                     <Uitgelicht />
                 </Route>
-                <Route exact path="/zoeken">
-                    <ZoekPagina />
-                </Route>
                 <Route exact path="/cijfers">
                     <Cijfers />
+                </Route>
+                <Route exact path="/zoeken">
+                    <ZoekPagina />
                 </Route>
                 <Route exact path="/info">
                     <Info />

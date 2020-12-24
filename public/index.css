@@ -12,7 +12,7 @@ html, body {
 #header {
   background: rgb(54, 136, 57);
   width: 100%;
-  height: 35px;
+  height: 50px;
   padding: 0px 10px 0px 10px;
   top: 0px;
   position: fixed;
@@ -23,7 +23,7 @@ ul.header-lijst {
   display: table;
   list-style-type: none;
   width: 650px;
-  height: 35px;
+  height: 50px;
   margin: 0px auto;
   padding: 0px;
 }
@@ -47,13 +47,32 @@ ul.header-lijst li #logo {
   font-family: Staatliches;
   color: #FFF;
   position: relative;
-  font-size: 1.5em;
-  line-height: 35px;
+  font-size: 2em;
+  line-height: 50px;
   padding: 0px 0px 0px 0px;
   cursor: pointer;
   z-index: 900;
-
 }
+
+ul.header-lijst li #zoeken {
+  border-radius: 4px;
+  outline: none;
+  border: none;
+  padding: 0px 10px 0px 10px;
+  font-size: 1em;
+  font-weight: 600;
+  height: 30px;
+  background: rgba(255,255,255,1);
+  color: #166019;
+}
+ul.header-lijst li #zoeken::placeholder {
+  font-size: .8em;
+  font-weight: 600;
+  color: #666666;
+}
+
+
+
 ul.header-lijst li #datum {
   background: #FFF;
   color: #368839;
@@ -79,7 +98,7 @@ ul.header-lijst li #datum {
 
 #wrap {
   position: relative;
-  top: 35px;
+  top: 50px;
   max-width: 650px;
   margin: 0px auto;
   padding: 10px 0px 10px 0px;

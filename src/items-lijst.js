@@ -10,7 +10,6 @@ class ItemLijst extends Component {
   }
 
   render() {
-    const { error, isLoaded } = this.state;
     const { items } = this.props;
     return (
       <div id='wrap'>
