@@ -4,21 +4,21 @@ class ZoekVeld extends Component {
     constructor(props) {
         super(props)
         this.state = {
-            zoekInput: '',
+            updateInput: "startwaarde",
             error: null,
             isLoaded: false,
-            erWordtGezocht: false
+            erWordtGezocht: false,
+            resultaten: []
         };
+
     }
 
     componentDidUpdate() {
         if (this.state.erWordtGezocht === true) {
-            console.log("veldinhoud:" + this.state.zoekInput);
-            console.log("lol dit pas na true");
             const requestOptions = {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({ term: 'vuurwerk' })
+                body: JSON.stringify({ term: this.state.updateInput })
             };
             fetch("http://127.0.0.1:5000/items/zoeken", requestOptions)
                 .then(res => res.json())
@@ -27,7 +27,7 @@ class ZoekVeld extends Component {
                         console.log(result)
                         this.setState({
                             isLoaded: true,
-                            items: result
+                            resultaten: result
                         });
                     },
                     (error) => {
@@ -47,9 +47,8 @@ class ZoekVeld extends Component {
 
     render() {
         const handleInput = (event) => {
-            console.log("yoooo input")
             this.setState({
-                zoekInput: event.key
+                updateInput: event.target.value
             });
         }
         const handleKeyDown = (event) => {
@@ -59,11 +58,7 @@ class ZoekVeld extends Component {
                 });
             }
         }
-        console.log('status erWordtGezocht = ' + this.state.erWordtGezocht)
-
-        const zoekInput = this.state.zoekInput;
-
-        return <div><input value={zoekInput} type='text' onInput={handleInput} onKeyDown={handleKeyDown} /></div>;
+        return <div><input placeholder='Zoeken' id='zoeken' type='text' onChange={handleInput} onKeyDown={handleKeyDown} /></div>;
     }
 }
 
