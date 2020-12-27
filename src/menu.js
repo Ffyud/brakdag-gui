@@ -18,7 +18,15 @@ export default function BrakdagMenu() {
             <div id="header">
                 <ul className="header-lijst">
                     <li id="header-logo">
-                        <Link to="/"><div id="logo">Brakdag</div></Link>
+                        <Link to="/">
+                            <div id="logo">Brakdag</div>
+                            <div id="logo-small">BD</div>
+                            </Link>
+                    </li>
+                    <li id="header-info">
+                        <Link to="/info">
+                            <div id="info"><i className="ri-information-line"></i></div>
+                        </Link>
                     </li>
                     <li id="header-datum">
                         <div id="datum">
@@ -26,10 +34,7 @@ export default function BrakdagMenu() {
                             <div id="dagmaand">20 NOV</div>
                         </div>
                     </li>
-                    <li><ZoekVeld/></li>
-                    <li>
-                        <Link to="/info"><i className="ri-information-line"></i></Link>
-                    </li>
+                    <li id="header-zoek"><ZoekVeld/></li>
                 </ul>
             </div>
             <Switch>
