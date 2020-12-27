@@ -17,8 +17,14 @@ export default function BrakdagMenu() {
         <Router>
             <div id="header">
                 <ul className="header-lijst">
-                    <li>
+                    <li id="header-logo">
                         <Link to="/"><div id="logo">Brakdag</div></Link>
+                    </li>
+                    <li id="header-datum">
+                        <div id="datum">
+                            <div id="weekdag">MAANDAG</div>
+                            <div id="dagmaand">20 NOV</div>
+                        </div>
                     </li>
                     <li><ZoekVeld/></li>
                     <li>
