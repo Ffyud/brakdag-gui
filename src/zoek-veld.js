@@ -58,7 +58,7 @@ class ZoekVeld extends Component {
                 });
             }
         }
-        return <div><input placeholder='Zoeken' id='zoeken' type='text' onChange={handleInput} onKeyDown={handleKeyDown} /></div>;
+        return <div><input placeholder='ZOEKEN' id='zoeken' type='text' onChange={handleInput} onKeyDown={handleKeyDown} /></div>;
     }
 }
 
