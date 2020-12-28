@@ -5,12 +5,12 @@ import {
     Route,
     Link
 } from 'react-router-dom';
-import LijstAllesVandaag from './lijst-vandaag.js';
 import InfoPagina from './info-pagina.js';
 import UitgelichtPagina from './uitgelicht-pagina.js';
 import CijfersPagina from './cijfers-pagina.js';
 import ZoekVeld from './zoek-veld.js';
 import ZoekPagina from './zoek-pagina.js';
+import HomePagina from './home-pagina.js';
 
 export default function BrakdagMenu() {
     return (
@@ -34,7 +34,10 @@ export default function BrakdagMenu() {
                             <div id="dagmaand">20 NOV</div>
                         </div>
                     </li>
-                    <li id="header-zoek"><ZoekVeld/></li>
+                    <li id="header-zoek">
+                        {/* <Link to="/zoeken"></Link> */}
+                        <ZoekVeld/>
+                    </li>
                 </ul>
             </div>
             <Switch>
@@ -61,7 +64,7 @@ export default function BrakdagMenu() {
 
 function Thuis() {
     return (
-        <LijstAllesVandaag />
+        <HomePagina />
     );
 }
 
@@ -74,6 +77,11 @@ function Uitgelicht() {
 function Cijfers() {
     return (
         <CijfersPagina />
+    );
+}
+function Zoeken() {
+    return (
+        <ZoekPagina />
     );
 }
 

@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import BrakdagMenu from './menu';
+import ZoekPagina from './zoek-pagina';
 
 class ZoekVeld extends Component {
     constructor(props) {
@@ -10,7 +12,6 @@ class ZoekVeld extends Component {
             erWordtGezocht: false,
             resultaten: []
         };
-
     }
 
     componentDidUpdate() {
@@ -58,8 +59,8 @@ class ZoekVeld extends Component {
                 });
             }
         }
+
         return <div><input placeholder='ZOEKEN' id='zoeken' type='text' onChange={handleInput} onKeyDown={handleKeyDown} /></div>;
     }
 }
-
 export default ZoekVeld;  

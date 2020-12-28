@@ -13,10 +13,7 @@ class ZoekPagina extends Component {
     }
 
     componentDidMount() {
-        this.setState({
-            resultaten: ZoekVeld.resultaten
-        });
-        console.log('update op zoek-pagina ' + ZoekVeld.resultaten);
+        // bij het laden iets doen
     }
 
     render() {
