@@ -21,7 +21,7 @@ class ZoekVeld extends Component {
     componentDidUpdate() {
         var huidigeInput = this.state.updateInput;
         if (this.state.erWordtGezocht === true) {
-            if(huidigeInput.length > 3) {
+            if(huidigeInput.length > 2) {
                 const requestOptions = {
                     method: 'POST',
                     headers: { 'Content-Type': 'application/json' },
