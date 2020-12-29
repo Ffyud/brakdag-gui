@@ -22,7 +22,9 @@ class BrakdagMenu extends Component{
     }
 
     zoekOpdracht = (resultaten) => {
-        this.setState({zoekResultaten: resultaten});
+        this.setState({
+            zoekResultaten: resultaten
+        });
     }
 
     render() {

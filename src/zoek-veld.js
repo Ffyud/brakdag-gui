@@ -1,6 +1,4 @@
 import React, { Component } from 'react';
-import BrakdagMenu from './menu';
-import ZoekPagina from './zoek-pagina';
 
 class ZoekVeld extends Component {
     constructor(props) {
@@ -10,12 +8,13 @@ class ZoekVeld extends Component {
             error: null,
             isLoaded: false,
             erWordtGezocht: false,
-            resultaten: []
+            resultaten: [],
+            backgroundColor: "#FFF"
         };
     }
 
     zoekOpdracht = () => {
-        this.props.zoekOpdracht(this.state.resultaten);            
+        this.props.zoekOpdracht(this.state.resultaten);
     }
 
     componentDidUpdate() {
@@ -69,7 +68,24 @@ class ZoekVeld extends Component {
             }
         }
 
-        return <div><input placeholder='ZOEKEN' id='zoeken' type='text' onChange={handleInput} onKeyDown={handleKeyDown} /></div>;
+        const doeRustig = () => {
+            if(this.state.updateInput !== '')
+            {
+                this.setState({
+                    backgroundColor: "rgba(255, 255, 255, 0.5)",
+                    fontColor: "rgba(0, 0, 0, 0.5)"
+                });
+            }
+        }
+
+        const doeActief = () => {
+            this.setState({
+                backgroundColor: "#FFF",
+                fontColor: "#000"
+            });
+        }
+
+        return <div><input placeholder='ZOEKEN' style={{ color: this.state.fontColor,backgroundColor: this.state.backgroundColor}} id='zoeken' type='text' onChange={handleInput} onKeyDown={handleKeyDown} onBlur={doeRustig} onFocus={doeActief}/></div>;
     }
 }
 export default ZoekVeld;  
