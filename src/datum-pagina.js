@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import ItemsLijst from './items-lijst.js';
 
-class ZoekPagina extends Component {
+class DatumPagina extends Component {
     constructor(props) {
         super(props)
         this.state = {
@@ -11,12 +11,12 @@ class ZoekPagina extends Component {
     }
 
     render() {
-        const { onZoekOpdracht } = this.props;
+        const { onDatumOpdracht } = this.props;
 
         return (
-            <div><ItemsLijst items={onZoekOpdracht} /></div>
+            <div><ItemsLijst items={onDatumOpdracht} /></div>
         );
     }
 }
 
-export default ZoekPagina;
+export default DatumPagina;

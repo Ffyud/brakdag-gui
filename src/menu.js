@@ -12,12 +12,14 @@ import ZoekVeld from './zoek-veld.js';
 import DatumVeld from './datum-veld.js';
 import ZoekPagina from './zoek-pagina.js';
 import HomePagina from './home-pagina.js';
+import DatumPagina from './datum-pagina.js';
 
 class BrakdagMenu extends Component{
     constructor(props) {
         super(props)
         this.state = {
-            zoekResultaten: []
+            zoekResultaten: [],
+            datumResultaten: []
         }
     }
 
@@ -27,9 +29,16 @@ class BrakdagMenu extends Component{
         });
     }
 
+    datumOpdracht = (resultaten) => {
+        this.setState({
+            datumResultaten: resultaten
+        });
+    }
+
     render() {
         const zoekResultaten = this.state.zoekResultaten;
-  
+        const datumResultaten = this.state.datumResultaten;
+
         return (
             <Router>
                 <div id="header">
@@ -46,7 +55,9 @@ class BrakdagMenu extends Component{
                             </Link>
                         </li>
                         <li id="header-datum">
-                            {/* <DatumVeld/> */}
+                            <Link to="/datum">
+                                <DatumVeld datumOpdracht={this.datumOpdracht}/>
+                            </Link>
                         </li>
                         <li id="header-zoek">
                             <Link to="/zoeken">
@@ -64,6 +75,9 @@ class BrakdagMenu extends Component{
                     </Route>
                     <Route exact path="/cijfers">
                         <Cijfers />
+                    </Route>
+                    <Route exact path="/datum">
+                        <DatumPagina onDatumOpdracht={datumResultaten} />
                     </Route>
                     <Route exact path="/zoeken">
                         <ZoekPagina onZoekOpdracht={zoekResultaten} />

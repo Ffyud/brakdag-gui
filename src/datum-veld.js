@@ -19,6 +19,11 @@ class DatumVeld extends Component {
         this.handleChange = this.handleChange.bind(this)
     }
 
+    datumOpdracht = () => {
+        this.props.datumOpdracht(this.state.resultaten);
+    }
+
+
     componentDidUpdate() {
         console.log("datum aangepast naar: "+ this.state.startDate);
     }
@@ -40,14 +45,8 @@ class DatumVeld extends Component {
             const handleCalendarClose = () => console.log("Calendar closed");
             const handleCalendarOpen = () => console.log("Calendar opened");
         
-
             return (
                 <div>
-                    <div id="datum" onClick={this.openDatePicker}>
-                        {/* <div id="weekdag">MAANDAG</div> */}
-                        <div id="dagmaand">20 NOV</div>
-                        <div id="weekdag"></div>
-                    </div>
                     <DatePicker
                     selected={this.state.startDate}
                     onChange={this.handleChange}
@@ -55,7 +54,7 @@ class DatumVeld extends Component {
                     onCalendarOpen={handleCalendarOpen}
                     onClickOutside={this.openDatePicker}
                     open={this.state.datePickerIsOpen}
-                    dateFormat="EEEE"
+                    dateFormat="dd MMMM"
                     locale="nl"
                     />
                     
