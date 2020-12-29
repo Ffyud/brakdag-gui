@@ -14,8 +14,20 @@ import ZoekPagina from './zoek-pagina.js';
 import HomePagina from './home-pagina.js';
 
 class BrakdagMenu extends Component{
+    constructor(props) {
+        super(props)
+        this.state = {
+            zoekResultaten: []
+        }
+    }
+
+    zoekOpdracht = (resultaten) => {
+        this.setState({zoekResultaten: resultaten});
+    }
+
     render() {
-        const zoekResultaten = [];
+        const zoekResultaten = this.state.zoekResultaten;
+  
         return (
             <Router>
                 <div id="header">
@@ -35,8 +47,9 @@ class BrakdagMenu extends Component{
                             {/* <DatumVeld/> */}
                         </li>
                         <li id="header-zoek">
-                            {/* <Link to="/zoeken"></Link> */}
-                            <ZoekVeld/>
+                            <Link to="/zoeken">
+                                <ZoekVeld zoekOpdracht={this.zoekOpdracht}/>
+                            </Link>
                         </li>
                     </ul>
                 </div>
@@ -51,7 +64,7 @@ class BrakdagMenu extends Component{
                         <Cijfers />
                     </Route>
                     <Route exact path="/zoeken">
-                        <ZoekPagina resultaten={zoekResultaten} />
+                        <ZoekPagina onZoekOpdracht={zoekResultaten} />
                     </Route>
                     <Route exact path="/info">
                         <Info />
@@ -81,11 +94,6 @@ function Uitgelicht() {
 function Cijfers() {
     return (
         <CijfersPagina />
-    );
-}
-function Zoeken() {
-    return (
-        <ZoekPagina />
     );
 }
 

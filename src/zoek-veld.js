@@ -6,7 +6,7 @@ class ZoekVeld extends Component {
     constructor(props) {
         super(props)
         this.state = {
-            updateInput: "startwaarde",
+            updateInput: "",
             error: null,
             isLoaded: false,
             erWordtGezocht: false,
@@ -14,35 +14,44 @@ class ZoekVeld extends Component {
         };
     }
 
+    zoekOpdracht = () => {
+        this.props.zoekOpdracht(this.state.resultaten);            
+    }
+
     componentDidUpdate() {
+        var huidigeInput = this.state.updateInput;
         if (this.state.erWordtGezocht === true) {
-            const requestOptions = {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({ term: this.state.updateInput })
-            };
-            fetch("http://127.0.0.1:5000/items/zoeken", requestOptions)
-                .then(res => res.json())
-                .then(
-                    (result) => {
-                        console.log(result)
+            if(huidigeInput.length > 3) {
+                const requestOptions = {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ term: this.state.updateInput })
+                };
+                fetch("http://127.0.0.1:5000/items/zoeken", requestOptions)
+                    .then(res => res.json())
+                    .then(
+                        (result) => {
+                            console.log(result)
+                            this.setState({
+                                isLoaded: true,
+                                resultaten: result
+                            });
+                            this.zoekOpdracht()
+    
+                        },
+                        (error) => {
+                            this.setState({
+                                isLoaded: true,
+                                error
+                            });
+                        }
+                    )
+                    .then(
                         this.setState({
-                            isLoaded: true,
-                            resultaten: result
-                        });
-                    },
-                    (error) => {
-                        this.setState({
-                            isLoaded: true,
-                            error
-                        });
-                    }
-                )
-                .then(
-                    this.setState({
-                        erWordtGezocht: false
-                    })
-                )
+                            erWordtGezocht: false
+                        })
+                    )
+            }
         }
     }
 
