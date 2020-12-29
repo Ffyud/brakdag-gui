@@ -8,7 +8,7 @@ class ZoekPagina extends Component {
         this.state = {
           error: null,
           isLoaded: false,
-          resultaten: []
+          resultaten: this.props
         };
     }
 

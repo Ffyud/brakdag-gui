@@ -9,10 +9,11 @@ import InfoPagina from './info-pagina.js';
 import UitgelichtPagina from './uitgelicht-pagina.js';
 import CijfersPagina from './cijfers-pagina.js';
 import ZoekVeld from './zoek-veld.js';
+import DatumVeld from './datum-veld.js';
 import ZoekPagina from './zoek-pagina.js';
 import HomePagina from './home-pagina.js';
 
-export default function BrakdagMenu() {
+function BrakdagMenu() {
     return (
         <Router>
             <div id="header">
@@ -29,10 +30,7 @@ export default function BrakdagMenu() {
                         </Link>
                     </li>
                     <li id="header-datum">
-                        <div id="datum">
-                            <div id="weekdag">MAANDAG</div>
-                            <div id="dagmaand">20 NOV</div>
-                        </div>
+                        {/* <DatumVeld/> */}
                     </li>
                     <li id="header-zoek">
                         {/* <Link to="/zoeken"></Link> */}
@@ -51,7 +49,7 @@ export default function BrakdagMenu() {
                     <Cijfers />
                 </Route>
                 <Route exact path="/zoeken">
-                    <ZoekPagina />
+                    <ZoekPagina resultaten={zoekResultaten} />
                 </Route>
                 <Route exact path="/info">
                     <Info />
@@ -61,6 +59,8 @@ export default function BrakdagMenu() {
         </Router>
     );
 }
+
+export default BrakdagMenu;
 
 function Thuis() {
     return (

@@ -132,9 +132,26 @@ ul.header-lijst li #datum {
   text-align: center;
 }
 
-ul.header-lijst li #datum:hover {
+/* ul.header-lijst li #datum:hover,
+ul.header-lijst li #datum:hover .react-datepicker__input-container input  {
   color:#000;
   background: #FFF;
+} */
+
+.react-datepicker__input-container input {
+  width: 85px;
+  height: 15px;
+  text-transform: uppercase;
+  outline: none;
+  border: none;
+  background: none;
+  color: #FFF;
+  font-size: inherit;
+  pointer-events: none;
+}
+
+.react-datepicker-wrapper {
+  height: 40px;
 }
 
 ul.header-lijst li #info {
@@ -157,11 +174,11 @@ ul.header-lijst li #info:hover {
 }
 
 #datum #weekdag {
-  position: absolute;
+  /* position: absolute;
   height: 15px;
   line-height: 15px;
-  top: 10px;
-  font-weight: 800;
+  top: 9px;
+  font-weight: 800; */
 }
 #datum #dagmaand {
   position: absolute;
