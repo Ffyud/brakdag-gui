@@ -14,6 +14,7 @@ class ZoekPagina extends Component {
 
     componentDidMount() {
         // bij het laden iets doen
+        console.log("Resultaten die we hebben zijn: " + this.state.resultaten);
     }
 
     render() {
