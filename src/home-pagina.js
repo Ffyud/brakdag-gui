@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import ItemsLijst from './items-lijst.js';
+import ItemsLijstPlaceholder from './items-lijst-placeholder.js';
 
 class HomePagina extends Component {
     constructor(props) {
@@ -35,7 +36,7 @@ class HomePagina extends Component {
         if (error) {
           return <div>Niet goed gegaan: {error.message}</div>;
         } else if (!isLoaded) {
-          return <div>Laden...</div>;
+          return <div><ItemsLijstPlaceholder /></div>;
         } else {
           return (
             <div><ItemsLijst items={resultaten} /></div>

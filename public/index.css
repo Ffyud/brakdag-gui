@@ -6,7 +6,7 @@ html, body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background: #FFF;
+  background: #EEE;
 }
 
 #header {
@@ -23,6 +23,7 @@ ul.header-lijst {
   display: table;
   list-style-type: none;
   width: 100%;
+  max-width: 650px;
   height: 50px;
   margin: 0px auto;
   padding: 0px;
@@ -45,6 +46,7 @@ ul.header-lijst li a:hover {
 
 ul.header-lijst #header-logo {
   width: 100px;
+  padding-left: 10px;
 }
 ul.header-lijst #header-datum {
   width: 50px;
@@ -126,7 +128,6 @@ ul.header-lijst li #datum {
   cursor: pointer;
   color: #FFF;
   box-shadow: inset 0px 0px 0px 1px #FFF;
-  font-size: 0.7em;
   padding: 0px 5px 0px 5px;
   margin: 5px 0px 5px 0px;
   text-align: center;
@@ -139,23 +140,35 @@ ul.header-lijst li #datum:hover .react-datepicker__input-container input  {
 } */
 
 .react-datepicker__input-container input {
-  width: 85px;
-  height: 15px;
+  max-width: 115px;
+  height: 35px;
+  padding: 0px 0px 0px 0px;
   text-transform: uppercase;
+  text-align: center;
+  vertical-align: top;
   outline: none;
   border: none;
+  color: inherit;
   background: none;
-  color: #FFF;
-  font-size: inherit;
+  font-size: .8em;
   pointer-events: none;
+  font-weight: 600;
 }
+.react-datepicker-wrapper:hover {
+  color: #000;
+  background: #FFF;
+} 
 
 .react-datepicker-wrapper {
-  height: 40px;
+  border-radius: 2px;
+  color: #FFF;
+  padding: 0px 5px 0px 5px !important;
+  margin: 5px 0px 5px 0px;
+  height: 35px;
 }
 
 ul.header-lijst li #info {
-  border-radius: 4px;
+  border-radius: 2px;
   height: 35px; 
   width: 35px;
   line-height: 35px;
@@ -170,21 +183,6 @@ ul.header-lijst li #info {
 ul.header-lijst li #info:hover {
   color:#000;
   background: #FFF;
-}
-
-#datum #weekdag {
-  /* position: absolute;
-  height: 15px;
-  line-height: 15px;
-  top: 9px;
-  font-weight: 800; */
-}
-#datum #dagmaand {
-  position: absolute;
-  height: 15px;
-  line-height: 15px;
-  top: 25px;
-
 }
 
 #footer {
@@ -219,9 +217,10 @@ ul.lijst {
 ul.lijst-item {
   list-style-type: none;
   padding: 5px 5px 5px 5px;
-  box-shadow: 0px 1px 0px 0px #DBDBDB;
+  box-shadow: 0px 1px 0px 0px #bababa;
+  border-radius: 2px;
   background: #FFF;
-  margin: 0px 0px 5px 0px;
+  margin: 0px 0px 10px 0px;
 }
 ul.lijst-item li { 
   display: table-cell;
@@ -253,6 +252,21 @@ ul.lijst-item li.bron img {
   position: relative;
   vertical-align: top;
 }
+
+.lijst-item-placeholder {
+  height: 100px;
+  background: #DDDBDB;
+  border-radius: 2px;
+  margin-bottom: 10px;
+}
+
+.lijst-item-placeholder-small {
+  height: 75px;
+  background: #DDDBDB;
+  border-radius: 2px;
+  margin-bottom: 10px;
+}
+
 
 .box-wide {
   padding: 10px;
