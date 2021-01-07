@@ -18,7 +18,7 @@ class BrakdagMenu extends Component{
     constructor(props) {
         super(props)
         this.state = {
-            zoekResultaten: [],
+            zoekResultaten: undefined,
             datumResultaten: []
         }
     }

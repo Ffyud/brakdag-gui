@@ -8,7 +8,7 @@ class ZoekVeld extends Component {
             error: null,
             isLoaded: false,
             erWordtGezocht: false,
-            resultaten: [],
+            resultaten: undefined,
             backgroundColor: "#FFF"
         };
     }
@@ -50,6 +50,14 @@ class ZoekVeld extends Component {
                             erWordtGezocht: false
                         })
                     )
+            }
+            else if(huidigeInput.length === 0) {
+                this.setState({
+                    resultaten: undefined,
+                    isLoaded: false,
+                    erWordtGezocht: false
+                });
+                this.zoekOpdracht()
             }
         }
     }

@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import ItemLijstPlaceholder from './items-lijst-placeholder.js';
 import ItemsLijst from './items-lijst.js';
 
 class DatumPagina extends Component {
@@ -14,7 +15,8 @@ class DatumPagina extends Component {
         const { onDatumOpdracht } = this.props;
 
         return (
-            <div><ItemsLijst items={onDatumOpdracht} /></div>
+            <div><ItemLijstPlaceholder /></div>
+            // <div><ItemsLijst items={onDatumOpdracht} /></div>
         );
     }
 }
