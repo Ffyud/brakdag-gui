@@ -144,8 +144,8 @@ ul.header-lijst li #datum {
   border: none;
   color: inherit;
   background: none;
+  cursor: pointer;
   font-size: .8em;
-  pointer-events: none;
   font-weight: 600;
 }
 .react-datepicker-wrapper:hover {
