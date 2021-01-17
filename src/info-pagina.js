@@ -8,6 +8,10 @@ class InfoPagina extends Component {
           Brakdag is een aggregator van nieuws. Brakdag verzamelt nieuws uit de stad Groningen van allerlei bronnen en maakt het inzichtelijk.
         </div>
         <div className='box-wide'>
+          <span><b><i className="ri-search-eye-line ri-2x"></i><br/> Nieuws inzichtelijk</b></span>
+          <span> Bekijk het nieuws van vandaag, per datum, per bron of zoek iets specifieks.</span>
+        </div>   
+        <div className='box-wide'>
           <span><b><i className="ri-archive-line ri-2x"></i><br/> Levend archief</b></span>
           <span> Doorzoek de vele duizenden artikelen uit Stad. Dat zoekt wat makkelijker dan alle nieuwssites bij langs te gaan.</span>
         </div>      

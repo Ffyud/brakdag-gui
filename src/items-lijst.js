@@ -24,11 +24,14 @@ class ItemsLijst extends Component {
                   <a target="blank" href={item['link']}>
                     {item['title']}
                   </a>
+                  <div className='description'>
+                    {item['description'].split(". ", 1)}
+                  </div>
                 </li>
-                <li className='description'>
+                {/* <li className='description'>
                   {item['description'].split(". ", 1)}
-
-                </li>
+                </li> */}
+                {/* <li className='options'><i class="ri-arrow-up-line"></i><br/><i class="ri-share-box-line"></i></li> */}
               </ul>
             </li>
           ))}

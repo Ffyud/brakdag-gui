@@ -10,7 +10,7 @@ html, body {
 }
 
 #header {
-  background: rgb(54, 136, 57);
+  background: #4F6C51;
   width: 100%;
   height: 50px;
   padding: 0px 0px 0px 0px;
@@ -59,7 +59,7 @@ ul.header-lijst #header-info {
 }
 ul.header-lijst li #logo {
   font-family: Staatliches;
-  color: #FFF;
+  color: #FDFBEF;
   position: relative;
   font-size: 2.345em;
   line-height: 35px;
@@ -67,11 +67,12 @@ ul.header-lijst li #logo {
   cursor: pointer;
   z-index: 900;
   height: 35px;
+  border-radius: 2px;
 }
 
 ul.header-lijst li #logo-small {
   font-family: Staatliches;
-  color: #FFF;
+  color: #FDFBEF;
   position: relative;
   font-size: 2.345em;
   line-height: 35px;
@@ -80,13 +81,15 @@ ul.header-lijst li #logo-small {
   z-index: 900;
   height: 35px;
   display: none;
+  border-radius: 2px;
 }
 
 ul.header-lijst li #logo:hover {
-  color: #000;
+  color:#FFF;
 }
 ul.header-lijst li #logo-small:hover {
-  color: #000;
+  color:#FFF;
+
 }
 
 @media only screen and (max-width: 600px) {
@@ -112,7 +115,7 @@ ul.header-lijst li #zoeken {
   font-weight: 600;
   height: 35px;
   width: calc(100% - 25px);
-  background: rgba(255,255,255,1);
+  background: rgb(252, 251, 238);
   color: #000;
 }
 ul.header-lijst li #zoeken::placeholder {
@@ -126,7 +129,7 @@ ul.header-lijst li #datum {
   height: 35px; 
   width: 85px;
   cursor: pointer;
-  color: #FFF;
+  color: #FDFBEF;
   box-shadow: inset 0px 0px 0px 1px #FFF;
   padding: 0px 5px 0px 5px;
   margin: 5px 0px 5px 0px;
@@ -145,17 +148,17 @@ ul.header-lijst li #datum {
   color: inherit;
   background: none;
   cursor: pointer;
-  font-size: .8em;
+  font-size: 1em;
   font-weight: 600;
 }
 .react-datepicker-wrapper:hover {
   color: #000;
-  background: #FFF;
+  background: #FDFBEF;
 } 
 
 .react-datepicker-wrapper {
   border-radius: 2px;
-  color: #FFF;
+  color: #FDFBEF;
   padding: 0px 5px 0px 5px !important;
   margin: 5px 0px 5px 0px;
   height: 35px;
@@ -167,7 +170,7 @@ ul.header-lijst li #info {
   width: 35px;
   line-height: 35px;
   cursor: pointer;
-  color: #FFF;
+  color: #FDFBEF;
   font-size: 1.2em;
   padding: 0px 5px 0px 5px;
   margin: 5px 0px 5px 0px;
@@ -176,7 +179,7 @@ ul.header-lijst li #info {
 
 ul.header-lijst li #info:hover {
   color:#000;
-  background: #FFF;
+  background: #FDFBEF;
 }
 
 #footer {
@@ -216,8 +219,9 @@ ul.lijst {
 }
 ul.lijst-item {
   list-style-type: none;
-  padding: 5px 5px 5px 5px;
-  box-shadow: 0px 1px 0px 0px #bababa;
+  position: relative;
+  padding: 0px;
+  box-shadow: 0px 1px 0px 0px #B2B49D;
   border-radius: 2px;
   background: #FFF;
   margin: 0px 0px 10px 0px;
@@ -228,32 +232,50 @@ ul.lijst-item li {
   vertical-align: middle;
 }
 ul.lijst-item li.title {
-  font-weight: 600;
+  padding: 10px 10px 10px 0px;
 }
 ul.lijst-item li.title a {
   cursor: pointer;
+  font-weight: 600;
   text-decoration: none;
-  color: inherit;
+  color: #000;
 }
 ul.lijst-item li.title a:hover {
   text-decoration: underline;
 }
-ul.lijst-item li.description {
-  color: #777676;
-  display: inline-block;
-  padding-left: 45px;
+ul.lijst-item .description {
+  color: #6B6C5B;
+  font-weight: 400;
 }
+/* ul.lijst-item li.options {
+  color: #6B6C5B;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+} */
+
 ul.lijst-item li.bron {
-  padding: 0px 10px 0px 0px;
+  padding: 10px 10px 10px 10px;
+  border-top-left-radius: 2px;
+  border-bottom-left-radius: 2px;
+  cursor: pointer;
 }
+
 ul.lijst-item li.bron img {
   width: 35px;
   height: 35px;
+  padding: 5px 5px 5px 5px;
   position: relative;
   vertical-align: top;
+
+}
+
+ul.lijst-item li.bron:hover img {
+  transform: scale(1.05);
 }
 
 .lijst-item-placeholder {
+  position: relative;
   height: 100px;
   background: #e4e4e4;
   border-radius: 2px;
@@ -262,6 +284,7 @@ ul.lijst-item li.bron img {
 }
 
 .lijst-item-placeholder-small {
+  position: relative;
   height: 75px;
   background: #e4e4e4;
   border-radius: 2px;
@@ -278,8 +301,8 @@ ul.lijst-item li.bron img {
   width: 35px;
   height: 35px;
   border-radius: 35px;
-  margin-left: 10px;
-  margin-top: 10px;
+  margin-left: 15px;
+  top: calc(50% - 21px);
   background: #dedede;
   position: absolute;
 }
@@ -299,7 +322,7 @@ ul.lijst-item li.bron img {
   padding: 10px;
   font-size: 1.2em;
   color: #131313;
-  font-weight: 600;
+  font-weight: 400;
   text-align: center;
   margin: 0px auto;
   max-width: 500px;
