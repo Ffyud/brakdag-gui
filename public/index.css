@@ -164,7 +164,7 @@ ul.header-lijst li #datum {
   height: 35px;
 }
 
-ul.header-lijst li #info {
+ul.header-lijst li #info, #bron-info {
   border-radius: 2px;
   height: 35px; 
   width: 35px;
@@ -177,7 +177,7 @@ ul.header-lijst li #info {
   text-align: center;
 }
 
-ul.header-lijst li #info:hover {
+ul.header-lijst li #info:hover, #bron-info:hover {
   color:#000;
   background: #FDFBEF;
 }
@@ -233,6 +233,7 @@ ul.lijst-item li {
 }
 ul.lijst-item li.title {
   padding: 10px 10px 10px 0px;
+  width: 100%;
 }
 ul.lijst-item li.title a {
   cursor: pointer;
@@ -247,18 +248,18 @@ ul.lijst-item .description {
   color: #6B6C5B;
   font-weight: 400;
 }
-/* ul.lijst-item li.options {
-  color: #6B6C5B;
-  position: absolute;
-  top: 0px;
-  right: 0px;
-} */
+ul.lijst-item li.right {
+  padding: 0px 15px 0px 0px;
+}
+ul.lijst-item li.right .whats-the-count {
+  color: #009C56;
+  padding: 15px;
+  font-weight: 600;
+  text-align: center;
+}
 
 ul.lijst-item li.bron {
   padding: 10px 10px 10px 10px;
-  border-top-left-radius: 2px;
-  border-bottom-left-radius: 2px;
-  cursor: pointer;
 }
 
 ul.lijst-item li.bron img {
@@ -267,11 +268,7 @@ ul.lijst-item li.bron img {
   padding: 5px 5px 5px 5px;
   position: relative;
   vertical-align: top;
-
-}
-
-ul.lijst-item li.bron:hover img {
-  transform: scale(1.05);
+  cursor: pointer;
 }
 
 .lijst-item-placeholder {

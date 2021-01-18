@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import ItemLijstPlaceholder from './items-lijst-placeholder.js';
+import ItemLijstPlaceholder from './placeholder/items-lijst-placeholder.js';
 import ItemsLijst from './items-lijst.js';
 
 class DatumPagina extends Component {

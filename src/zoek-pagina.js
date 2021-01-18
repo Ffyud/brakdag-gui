@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import ItemsLijst from './items-lijst.js';
-import ItemsLijstPlaceholder from './items-lijst-placeholder.js';
-import NietGezochtPlaceholder from './niet-gezocht-placeholder.js';
-import NiksGevondenPlaceholder from './niks-gevonden-placeholder.js';
+import ItemsLijstPlaceholder from './placeholder/items-lijst-placeholder.js';
+import NietGezochtPlaceholder from './placeholder/niet-gezocht-placeholder.js';
+import NiksGevondenPlaceholder from './placeholder/niks-gevonden-placeholder.js';
 
 
 class ZoekPagina extends Component {

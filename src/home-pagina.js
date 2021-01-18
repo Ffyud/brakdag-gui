@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import ItemsLijst from './items-lijst.js';
-import ItemsLijstPlaceholder from './items-lijst-placeholder.js';
+import ItemsLijstPlaceholder from './placeholder/items-lijst-placeholder.js';
 
 class HomePagina extends Component {
     constructor(props) {

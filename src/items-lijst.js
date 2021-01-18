@@ -10,6 +10,11 @@ class ItemsLijst extends Component {
   }
 
   render() {
+
+    const toonPerBron = (event) => {
+      console.log("Geklikt op een bron! " + event.target.dataset.bron + " id ") 
+    }
+
     const { items } = this.props;
     return (
       <div id='wrap'>
@@ -18,7 +23,7 @@ class ItemsLijst extends Component {
             <li key={item['id']}>
               <ul className='lijst-item'>
                 <li className='bron'>
-                  <img alt={item['bron_title']} src={item['logo']} />
+                  <img alt={item['bron_title']} src={item['logo']} data-bron={item['bron_id']} onClick={toonPerBron}/>
                 </li>
                 <li className='title'>
                   <a target="blank" href={item['link']}>

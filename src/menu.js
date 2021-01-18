@@ -6,13 +6,13 @@ import {
     Link
 } from 'react-router-dom';
 import InfoPagina from './info-pagina.js';
-import UitgelichtPagina from './uitgelicht-pagina.js';
-import CijfersPagina from './cijfers-pagina.js';
 import ZoekVeld from './zoek-veld.js';
 import DatumVeld from './datum-veld.js';
 import ZoekPagina from './zoek-pagina.js';
 import HomePagina from './home-pagina.js';
 import DatumPagina from './datum-pagina.js';
+// import BronPagina from './bron-pagina.js';
+import BronOverzichtPagina from './bron-overzicht-pagina.js';
 
 class BrakdagMenu extends Component{
     constructor(props) {
@@ -54,6 +54,11 @@ class BrakdagMenu extends Component{
                                 <div id="info"><i className="ri-information-line"></i></div>
                             </Link>
                         </li>
+                        <li id="header-bron">
+                            <Link to="/bronnen">
+                                <div id="bron-info"><i class="ri-newspaper-line"></i></div>
+                            </Link>
+                        </li>
                         <li id="header-datum">
                             <Link to="/datum">
                                 <DatumVeld datumOpdracht={this.datumOpdracht}/>
@@ -70,12 +75,12 @@ class BrakdagMenu extends Component{
                     <Route exact path="/">
                         <Thuis />
                     </Route>    
-                    <Route exact path="/uitgelicht">
-                        <Uitgelicht />
+                    <Route exact path="/bronnen">
+                        <BronOverzichtPagina />
                     </Route>
-                    <Route exact path="/cijfers">
-                        <Cijfers />
-                    </Route>
+                    {/* <Route exact path="/bron/:bronId">
+                        <PerBron />
+                    </Route> */}
                     <Route exact path="/datum">
                         <DatumPagina onDatumOpdracht={datumResultaten} />
                     </Route>
@@ -98,18 +103,6 @@ export default BrakdagMenu;
 function Thuis() {
     return (
         <HomePagina />
-    );
-}
-
-function Uitgelicht() {
-    return (
-        <UitgelichtPagina />
-    );
-}
-
-function Cijfers() {
-    return (
-        <CijfersPagina />
     );
 }
 
