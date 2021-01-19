@@ -12,17 +12,18 @@ class ItemsLijst extends Component {
 
 
   render() {
+
     function MooieDescription(props) {
       var descKort = props.description.split(". ", 1);
       var descTrim = descKort[0].trim();
-      if(descTrim.slice(-1) !== ".") {
+      if (descTrim.slice(-1) !== ".") {
         descTrim += ".";
       }
       return <span>{descTrim}</span>;
     }
 
     const toonPerBron = (event) => {
-      console.log("Geklikt op een bron! " + event.target.dataset.bron + " id ") 
+      console.log("Geklikt op een bron! " + event.target.dataset.bron + " id ")
     }
 
     const { items } = this.props;
@@ -33,7 +34,7 @@ class ItemsLijst extends Component {
             <li key={item['id']}>
               <ul className='lijst-item'>
                 <li className='bron'>
-                  <img alt={item['bron_title']} src={item['logo']} data-bron={item['bron_id']} onClick={toonPerBron}/>
+                  <img alt={item['bron_title']} src={item['logo']} data-bron={item['bron_id']} onClick={toonPerBron} />
                 </li>
                 <li className='title'>
                   <a target="blank" href={item['link']}>
@@ -41,7 +42,6 @@ class ItemsLijst extends Component {
                   </a>
                   <div className='description'>
                     <MooieDescription description={item['description']} />
-                    {/* {item['description'].split(". ", 1)} */}
                   </div>
                 </li>
               </ul>
