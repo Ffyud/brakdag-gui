@@ -61,7 +61,7 @@ class BrakdagMenu extends Component{
                         </li>
                         <li id="header-datum">
                             <Link to="/datum">
-                                <DatumVeld datumOpdracht={this.datumOpdracht}/>
+                                <div id="datum-info"><i class="ri-history-line"></i></div>
                             </Link>
                         </li>
                         <li id="header-zoek">

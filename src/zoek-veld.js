@@ -9,7 +9,7 @@ class ZoekVeld extends Component {
             isLoaded: false,
             erWordtGezocht: false,
             resultaten: undefined,
-            backgroundColor: "#FFF"
+            backgroundColor: "rgb(252, 251, 238)"
         };
     }
 
@@ -88,7 +88,7 @@ class ZoekVeld extends Component {
 
         const doeActief = () => {
             this.setState({
-                backgroundColor: "#FFF",
+                backgroundColor: "rgb(252, 251, 238)",
                 fontColor: "#000"
             });
         }

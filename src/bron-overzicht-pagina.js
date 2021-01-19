@@ -45,27 +45,30 @@ class BronOverzichtPagina extends Component {
       return <div><ItemsLijstPlaceholder /></div>;
     } else {
       return (
-        <div id='wrap'>
-          <ul className='lijst'>
-            {resultaten.map(item => (
-              <li>
-                <ul className='lijst-item'>
-                  <li className='bron'>
-                    <img alt={item['bron_title']} src={item['logo']} data-bron={item['bron_id']} />
-                  </li>
-                  <li className='title'>
-                    <a target="blank" href={item['link_home']}>{item['title']}</a>
-                    <div className='description'>
-                      {item['description']}
-                    </div>
-                  </li>
-                  <li className='right'>
-                    <div className='whats-the-count'>{item['aantal_items']} artikelen</div>
-                  </li>
-                </ul>
-              </li>
-            ))}
-          </ul>
+        <div>
+          <div className="pagina-header">Overzicht van de bronnen</div>
+          <div id='wrap'>
+            <ul className='lijst'>
+              {resultaten.map(item => (
+                <li>
+                  <ul className='lijst-item'>
+                    <li className='bron'>
+                      <img alt={item['bron_title']} src={item['logo']} data-bron={item['bron_id']} />
+                    </li>
+                    <li className='title'>
+                      <a target="blank" href={item['link_home']}>{item['title']}</a>
+                      <div className='description'>
+                        {item['description']}
+                      </div>
+                    </li>
+                    <li className='right'>
+                      <div className='whats-the-count'>{item['aantal_items']} artikelen</div>
+                    </li>
+                  </ul>
+                </li>
+              ))}
+            </ul>
+          </div>
         </div>
       );
     }
