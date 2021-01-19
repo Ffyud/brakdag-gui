@@ -9,7 +9,17 @@ class ItemsLijst extends Component {
     };
   }
 
+
+
   render() {
+    function MooieDescription(props) {
+      var descKort = props.description.split(". ", 1);
+      var descTrim = descKort[0].trim();
+      if(descTrim.slice(-1) !== ".") {
+        descTrim += ".";
+      }
+      return <span>{descTrim}</span>;
+    }
 
     const toonPerBron = (event) => {
       console.log("Geklikt op een bron! " + event.target.dataset.bron + " id ") 
@@ -30,13 +40,10 @@ class ItemsLijst extends Component {
                     {item['title']}
                   </a>
                   <div className='description'>
-                    {item['description'].split(". ", 1)}
+                    <MooieDescription description={item['description']} />
+                    {/* {item['description'].split(". ", 1)} */}
                   </div>
                 </li>
-                {/* <li className='description'>
-                  {item['description'].split(". ", 1)}
-                </li> */}
-                {/* <li className='options'><i class="ri-arrow-up-line"></i><br/><i class="ri-share-box-line"></i></li> */}
               </ul>
             </li>
           ))}
