@@ -56,12 +56,12 @@ class BrakdagMenu extends Component{
                         </li>
                         <li id="header-bron">
                             <Link to="/bronnen">
-                                <div id="bron-info"><i class="ri-newspaper-line"></i></div>
+                                <div id="bron-info"><i className="ri-newspaper-line"></i></div>
                             </Link>
                         </li>
                         <li id="header-datum">
                             <Link to="/datum">
-                                <div id="datum-info"><i class="ri-history-line"></i></div>
+                                <div id="datum-info"><i className="ri-history-line"></i></div>
                             </Link>
                         </li>
                         <li id="header-zoek">

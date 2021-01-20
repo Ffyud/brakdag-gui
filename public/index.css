@@ -17,6 +17,7 @@ html, body {
   color: #666;
   text-shadow: 0px 1px #FFFFFF82;
   font-weight: 500;  
+  user-select: none;
 }
 
 #header {
@@ -27,6 +28,7 @@ html, body {
   top: 0px;
   position: fixed;
   z-index: 800;
+  user-select: none;
 }
 
 ul.header-lijst {
@@ -119,6 +121,7 @@ ul.header-lijst li #zoeken {
   width: calc(100% - 25px);
   background: rgb(252, 251, 238);
   color: #000;
+  user-select: auto;
 }
 ul.header-lijst li #zoeken::placeholder {
   font-size: .8em;
@@ -172,17 +175,6 @@ ul.header-lijst li #info:hover, #bron-info:hover, #datum-info:hover {
   background: #FDFBEF;
 }
 
-#footer {
-  position: relative;
-  height: 100px;
-  top: 50px;
-  bottom: 0px;
-  text-align: center;
-  vertical-align: middle;
-  background: rgb(54, 136, 57);
-  color: #FFF;
-}
-
 @font-face {
   font-family: 'Staatliches';
   src: url('Staatliches-Regular.ttf')  format('truetype');
@@ -194,12 +186,15 @@ ul.header-lijst li #info:hover, #bron-info:hover, #datum-info:hover {
   max-width: 650px;
   margin: 0px auto;
   padding: 10px 0px 10px 0px;
+  user-select: none;
+
 }
 .wrap-fixed {
   position: fixed !important;
   width: 100%;
   left: 50%;
   transform: translate(-50%, 0);
+  user-select: none;
 }
 
 ul.lijst {
@@ -252,6 +247,7 @@ ul.lijst-item li {
 ul.lijst-item li.title {
   padding: 10px 10px 10px 0px;
   width: 100%;
+  user-select: text;
 }
 ul.lijst-item li.title a {
   cursor: pointer;
@@ -265,6 +261,7 @@ ul.lijst-item li.title a:hover {
 ul.lijst-item .description {
   color: #6B6C5B;
   font-weight: 400;
+  user-select: text;
 }
 ul.lijst-item li.right {
   padding: 0px 15px 0px 0px;
@@ -331,6 +328,7 @@ ul.lijst-item li.bron img {
   left: calc(50% - 125px);
   color: #131313;
   font-weight: 600;
+  user-select: none;
 }
 
 .box-wide {
@@ -341,6 +339,7 @@ ul.lijst-item li.bron img {
   text-align: center;
   margin: 0px auto;
   max-width: 500px;
+  user-select: none;
 }
 .box-small {
   padding: 10px;
@@ -349,11 +348,8 @@ ul.lijst-item li.bron img {
   background: #FFF;
   border-radius: 2px;
   margin: 10px 10px 0px 10px;
+  user-select: none;
+
 }
 
 .box-small span { margin: auto; }
-
-.chart-wrapper { 
-  height: 540px;
-  width: 650px;
-}

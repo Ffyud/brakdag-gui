@@ -86,7 +86,8 @@ class ZoekVeld extends Component {
             }
         }
 
-        const doeActief = () => {
+        const doeActief = (event) => {
+            event.target.select();
             this.setState({
                 backgroundColor: "rgb(252, 251, 238)",
                 fontColor: "#000"

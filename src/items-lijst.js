@@ -9,8 +9,6 @@ class ItemsLijst extends Component {
     };
   }
 
-
-
   render() {
 
     function MooieDescription(props) {
