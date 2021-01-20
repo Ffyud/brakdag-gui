@@ -7,26 +7,28 @@ class ItemsUitgelichtLijst extends Component {
                 <ul className='lijst-flex'>
                     <li>
                         <div className='flex-item'>
-                            <img width="35px" height="35px" src='http://localhost:3000/logos/logo_gic.png' />
-                    Filmpje: de eerste online editie van ESNS in een notendop
+                            <div className='bron'>
+                                <img alt='logo' src='http://localhost:3000/logos/logo_gic.png' />
+                            </div>
+                            <div className='title'><a>Filmpje: de eerste online editie van ESNS in een notendop</a></div>
                     </div>
                     </li>
                     <li>
                         <div className='flex-item'>
-                            <img width="35px" height="35px" src='http://localhost:3000/logos/logo_gic.png' />
-                    Filmpje: de eerste online editie van ESNS in een notendop
+                        <div className='bron'>
+                                <img alt='logo' src='http://localhost:3000/logos/logo_rtvnoord.png' />
+                            </div>
+                            <div className='title'><a>Raadsleden diep teleurgesteld over N33: 'Treurig dat de regio de dupe wordt'</a></div>
+                            
                     </div>
                     </li>
                     <li>
                         <div className='flex-item'>
-                            <img width="35px" height="35px" src='http://localhost:3000/logos/logo_oog.png' />
-                            Onderzoek: ‘Na maanden op studentenkamer is de rek eruit’
-                    </div>
-                    </li>
-                    <li>
-                        <div className='flex-item'>
-                            <img width="35px" height="35px" src='http://localhost:3000/logos/logo_gic.png' />
-                    Filmpje: de eerste online editie van ESNS in een notendop
+                        <div className='bron'>
+                                <img alt='logo' src='http://localhost:3000/logos/logo_oog.png' />
+                            </div>
+                            <div className='title'><a>Gemeente: sportclubs kunnen ons bellen als ze problemen hebben</a></div>
+                            
                     </div>
                     </li>
                 </ul>

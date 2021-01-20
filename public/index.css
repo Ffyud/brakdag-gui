@@ -197,15 +197,63 @@ ul.header-lijst li #info:hover, #bron-info:hover, #datum-info:hover {
   user-select: none;
 }
 
-ul.lijst {
-  list-style-type: none;
-  margin: 0px;
-  padding: 0px 10px 0px 10px;
-}
+/* Compacte lijst met items naar elkaar */
 ul.lijst-flex {
   list-style-type: none;
   margin: 0px;
   display: table;
+  padding: 0px 10px 0px 10px;
+}
+
+ul.lijst-flex li {
+  display: table-cell;
+  position: relative;
+  min-width: 115px;
+  padding: 0px 5px 0px 5px;
+  margin: 0px 0px 0px 0px;
+}
+
+ul.lijst-flex li:first-child {
+  padding: 0px 5px 0px 0px;
+}
+
+ul.lijst-flex li:last-child {
+  padding: 0px 0px 0px 5px;
+}
+
+ul.lijst-flex li div.flex-item {
+  box-shadow: 0px 1px 0px 0px #B2B49D;
+  border-radius: 2px;
+  padding: 10px;
+  background: #FFF;
+  overflow: auto;
+}
+ul.lijst-flex li div.flex-item .bron img {
+  width: 35px;
+  height: 35px;
+  padding: 0px 5px 0px 0px;
+  position: relative;
+  vertical-align: top;
+  cursor: pointer;
+  float: left;
+}
+ul.lijst-flex li div.flex-item .title {
+  user-select: text;
+}
+ul.lijst-flex li div.flex-item .title a {
+  cursor: pointer;
+  font-weight: 400;
+  text-decoration: none;
+  color: #000;
+}
+ul.lijst-flex li div.flex-item .title a:hover {
+  text-decoration: underline;
+}
+
+/* Grote lijst met items onder elkaar */
+ul.lijst {
+  list-style-type: none;
+  margin: 0px;
   padding: 0px 10px 0px 10px;
 }
 ul.lijst-item {
@@ -216,27 +264,6 @@ ul.lijst-item {
   border-radius: 2px;
   background: #FFF;
   margin: 0px 0px 10px 0px;
-}
-
-ul.lijst-flex li {
-  display: table-cell;
-  position: relative;
-  min-width: 115px;
-  padding: 0px 5px 0px 5px;
-  margin: 0px 0px 0px 0px;
-}
-ul.lijst-flex li:first-child {
-  padding: 0px 5px 0px 0px;
-}
-ul.lijst-flex li:last-child {
-  padding: 0px 0px 0px 5px;
-}
-
-ul.lijst-flex li .flex-item {
-  box-shadow: 0px 1px 0px 0px #B2B49D;
-  border-radius: 2px;
-  padding: 10px;
-  background: #FFF;
 }
 
 ul.lijst-item li { 
