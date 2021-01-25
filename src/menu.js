@@ -7,7 +7,6 @@ import {
 } from 'react-router-dom';
 import InfoPagina from './info-pagina.js';
 import ZoekVeld from './zoek-veld.js';
-import DatumVeld from './datum-veld.js';
 import ZoekPagina from './zoek-pagina.js';
 import HomePagina from './home-pagina.js';
 import DatumPagina from './datum-pagina.js';

@@ -1,5 +1,12 @@
 import React, { Component } from 'react';
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link
+} from 'react-router-dom';
 import ItemsLijstPlaceholder from './placeholder/items-lijst-placeholder.js';
+import BronPagina from './bron-pagina';
 
 class BronOverzichtPagina extends Component {
   constructor(props) {
@@ -20,7 +27,6 @@ class BronOverzichtPagina extends Component {
       .then(res => res.json())
       .then(
         (result) => {
-          console.log('bronnen geladen lol')
           this.setState({
             isLoaded: true,
             resultaten: result
@@ -53,7 +59,16 @@ class BronOverzichtPagina extends Component {
                 <li>
                   <ul className='lijst-item'>
                     <li className='bron'>
-                      <img alt={item['bron_title']} src={item['logo']} data-bron={item['bron_id']} />
+                      <Router>
+                        <Link to={"/bron/" + item['id']}>
+                          <img alt={item['bron_title']} src={item['logo']} data-bron={item['bron_id']} />
+                        </Link>
+                        <Switch>
+                          <Route exact path="/bron/:bronId">
+                          <BronPagina/>
+                        </Route>
+                        </Switch>
+                      </Router>
                     </li>
                     <li className='title'>
                       <a target="blank" href={item['link_home']}>{item['title']}</a>
