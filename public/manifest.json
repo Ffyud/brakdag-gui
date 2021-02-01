@@ -1,6 +1,8 @@
 {
   "short_name": "Brakdag",
   "name": "Brakdag",
+  "description": "Brakdag is een verzamelaar van het nieuws uit de stad Groningen en maakt het inzichtelijk.",
+  "categories": ["nieuws", "lokaal", "groningen", "stad"],
   "icons": [
     {
       "src": "favicon.ico",
@@ -20,6 +22,8 @@
   ],
   "start_url": ".",
   "display": "standalone",
-  "theme_color": "rgb(54, 136, 57)",
-  "background_color": "#ffffff"
+  "orientation": "portrait-primary",
+  "lang": "nl",
+  "theme_color": "#4F6C51",
+  "background_color": "#EEE"
 }
