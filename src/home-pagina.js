@@ -9,7 +9,8 @@ class HomePagina extends Component {
     this.state = {
       error: null,
       isLoaded: false,
-      resultaten: []
+      resultaten: [],
+      todayDate: null
     };
   }
 
@@ -18,6 +19,24 @@ class HomePagina extends Component {
   }
 
   componentDidMount() {
+    var today = new Date();
+    const monthNames = ["januari", "februari", "maart", "april", "mei", "juni",
+  "juli", "augustus", "september", "october", "november", "december"
+];
+
+    const dayNames = ["zondag", "maandag", "dinsdag", "woensdag", "donderdag", "vrijdag", "zaterdag"]
+
+    var weekdayNumber = today.getDay()
+    var ddName = dayNames[weekdayNumber]
+
+    var dd = String(today.getDate());
+    var mmName =  monthNames[today.getMonth()];
+    today = ddName + ' ' + dd + ' ' + mmName;
+    
+    this.setState({
+      todayDate: today
+    });
+
     fetch("http://127.0.0.1:5000/items")
     .then(res => res.json())
     .then(
@@ -65,7 +84,7 @@ class HomePagina extends Component {
         <div>
           <div className="pagina-header">Uitgelicht</div>
           <ItemsUitgelichtLijst />
-          <div className="pagina-header">Het nieuws van maandag 18 januari</div>
+          <div className="pagina-header">Het nieuws van {this.state.todayDate}</div>
           <ItemsLijst items={resultaten} />
         </div>
       );
