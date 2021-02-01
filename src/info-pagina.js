@@ -5,23 +5,29 @@ class InfoPagina extends Component {
     return (
       <div id='wrap'>
         <div className='box-wide'>
-          Brakdag is een aggregator van nieuws. Brakdag verzamelt nieuws uit de stad Groningen van allerlei bronnen en maakt het inzichtelijk.
+          Brakdag is een verzamelaar van het nieuws uit de stad Groningen en maakt het inzichtelijk.
         </div>
-        <div className='box-wide'>
-          <span><b><i className="ri-search-eye-line ri-2x"></i><br/> Nieuws inzichtelijk</b></span>
-          <span> Bekijk het nieuws van vandaag, per datum, per bron of zoek iets specifieks.</span>
-        </div>   
-        <div className='box-wide'>
-          <span><b><i className="ri-archive-line ri-2x"></i><br/> Levend archief</b></span>
-          <span> Doorzoek de vele duizenden artikelen uit Stad. Dat zoekt wat makkelijker dan alle nieuwssites bij langs te gaan.</span>
-        </div>      
-        <div className='box-wide'>
-          <span><b><i className="ri-database-2-line ri-2x"></i><br/> Open Data</b></span>
-          <span> Gebruik het nieuws wat Brakdag verzamelt zelf in je eigen toepassing via de API.</span>
-        </div>
-        <div className='box-wide'>
-          <span><b><i className="ri-open-source-line ri-2x"></i><br/> Open Source</b></span>
-          <span> Help mee verbeteren of begin een eigen Brakdag-variant. De broncode is openbaar.</span>
+        <div className='box-flex'>
+          <div>
+            <h2><i className="ri-search-eye-line"></i>nieuws inzichtelijk</h2>
+            <span>Bekijk het nieuws van vandaag, per datum, per bron of zoek iets specifieks.</span>
+          </div>
+          <div>
+            <h2><i className="ri-archive-line"></i>levend archief</h2>
+            <span>Doorzoek de vele duizenden artikelen uit Stad. Dat zoekt wat makkelijker dan alle nieuwssites bij langs te gaan.</span>
+          </div>
+          <div>
+            <h2><i className="ri-database-2-line"></i>open api</h2>
+            <span>Bevraag de Brakdag Api op allerlei manieren om het nieuws op je eigen manier te gebruiken.</span>
+          </div>
+          <div>
+            <h2><i className="ri-open-source-line"></i>open source</h2>
+            <span>De volledige broncode van Brakdag is openbaar toegankelijk op Github.</span>
+          </div>
+          <div>
+            <h2><i className="ri-folder-download-line"></i>open data</h2>
+            <span>Het volledige archief is te downloaden, als CSV, Parquet of Avro bestand.</span>
+          </div>
         </div>
       </div>
     );

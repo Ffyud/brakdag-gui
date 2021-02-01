@@ -372,15 +372,26 @@ ul.lijst-item li.bron img {
   max-width: 500px;
   user-select: none;
 }
-.box-small {
-  padding: 10px;
-  display: inline-flex;
-  /* box-shadow: 0px 1px 0px 0px #DBDBDB; */
-  background: #FFF;
-  border-radius: 2px;
-  margin: 10px 10px 0px 10px;
-  user-select: none;
 
+.box-flex {
+  justify-content: center;
+  display:  flex;
+  flex-wrap: wrap;
 }
-
-.box-small span { margin: auto; }
+.box-flex div {
+  text-align: center;
+  background: #FFF;
+  margin: 10px;
+  max-width: 160px;
+  padding: 10px 10px 20px 10px;
+  border-radius: 2px;
+}
+.box-flex div h2 {
+  background: #F8C11E;
+  margin-top: 0px;
+  padding: 10px;
+}
+.box-flex div h2 i {
+  margin-right: 10px;
+  vertical-align: middle;
+}

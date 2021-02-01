@@ -20,7 +20,10 @@ class ItemsLijst extends Component {
     function MooieDescription(props) {
       var descKort = props.description.split(". ", 1);
       var descTrim = descKort[0].trim();
-      if (descTrim.slice(-1) !== ".") {
+      if(descTrim.length < 10) {
+        descTrim = ""
+      }
+      else if (descTrim.slice(-1) !== ".") {
         descTrim += ".";
       }
       return <span>{descTrim}</span>;
