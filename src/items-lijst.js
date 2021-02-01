@@ -1,4 +1,10 @@
 import React, { Component } from 'react';
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link
+} from 'react-router-dom';
 
 class ItemsLijst extends Component {
   constructor(props) {
@@ -20,10 +26,6 @@ class ItemsLijst extends Component {
       return <span>{descTrim}</span>;
     }
 
-    const toonPerBron = (event) => {
-      console.log("Geklikt op een bron! " + event.target.dataset.bron + " id ")
-    }
-
     const { items } = this.props;
     return (
       <div id='wrap'>
@@ -32,7 +34,9 @@ class ItemsLijst extends Component {
             <li key={item['id']}>
               <ul className='lijst-item'>
                 <li className='bron'>
-                  <img alt={item['bron_title']} src={item['logo']} data-bron={item['bron_id']} onClick={toonPerBron} />
+                <Link to={"/bron/" + item['bron_id']}>
+                  <img alt={item['bron_title']} src={item['logo']} data-bron={item['bron_id']} />
+                </Link>
                 </li>
                 <li className='title'>
                   <a target="blank" href={item['link']}>
