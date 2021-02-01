@@ -40,9 +40,7 @@ class BronPagina extends Component {
 
   render() {
     const { error, isLoaded, resultaten } = this.state;
-    if (error) {
-      return <div>Niet goed gegaan: {error.message}</div>;
-    } else if (!isLoaded || resultaten.length === 0) {
+    if (error || !isLoaded || resultaten.length === 0) {
       return <div><ItemLijstPlaceholder /></div>;
     } else {
       return (
