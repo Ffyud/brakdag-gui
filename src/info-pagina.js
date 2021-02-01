@@ -10,11 +10,11 @@ class InfoPagina extends Component {
         <div className='box-flex'>
           <div>
             <h2><i className="ri-search-eye-line"></i>nieuws inzichtelijk</h2>
-            <span>Bekijk het nieuws van vandaag, per datum, per bron of zoek iets specifieks.</span>
+            <span>Bekijk het nieuws per datum, bron of zoek iets specifieks.</span>
           </div>
           <div>
             <h2><i className="ri-archive-line"></i>levend archief</h2>
-            <span>Doorzoek de vele duizenden artikelen uit Stad. Dat zoekt wat makkelijker dan alle nieuwssites bij langs te gaan.</span>
+            <span>Doorzoek meer dan 200.000 artikelen uit het archief.</span>
           </div>
           <div>
             <h2><i className="ri-database-2-line"></i>open api</h2>
