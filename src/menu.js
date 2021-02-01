@@ -10,7 +10,7 @@ import ZoekVeld from './zoek-veld.js';
 import ZoekPagina from './zoek-pagina.js';
 import HomePagina from './home-pagina.js';
 import DatumPagina from './datum-pagina.js';
-// import BronPagina from './bron-pagina.js';
+import BronPagina from './bron-pagina.js';
 import BronOverzichtPagina from './bron-overzicht-pagina.js';
 
 class BrakdagMenu extends Component{
@@ -71,15 +71,13 @@ class BrakdagMenu extends Component{
                     </ul>
                 </div>
                 <Switch>
+                    <Route exact path="/bron/:bronId" component={BronPagina} />
                     <Route exact path="/">
                         <Thuis />
                     </Route>    
                     <Route exact path="/bronnen">
                         <BronOverzichtPagina />
                     </Route>
-                    {/* <Route exact path="/bron/:bronId">
-                        <PerBron />
-                    </Route> */}
                     <Route exact path="/datum">
                         <DatumPagina onDatumOpdracht={datumResultaten} />
                     </Route>

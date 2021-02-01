@@ -59,16 +59,9 @@ class BronOverzichtPagina extends Component {
                 <li>
                   <ul className='lijst-item'>
                     <li className='bron'>
-                      <Router>
                         <Link to={"/bron/" + item['id']}>
                           <img alt={item['bron_title']} src={item['logo']} data-bron={item['bron_id']} />
                         </Link>
-                        <Switch>
-                          <Route exact path="/bron/:bronId">
-                          <BronPagina/>
-                        </Route>
-                        </Switch>
-                      </Router>
                     </li>
                     <li className='title'>
                       <a target="blank" href={item['link_home']}>{item['title']}</a>
