@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 
 class InfoPagina extends Component {
+
   render() {
     return (
       <div id='wrap'>
@@ -28,6 +29,10 @@ class InfoPagina extends Component {
             <h2><i className="ri-folder-download-line ri-2x"></i><br />open data</h2>
             <span>Het volledige archief is te downloaden, als CSV, Parquet of Avro bestand.</span>
           </div> */}
+        </div>
+        <div className='box-wide'>
+          Brakdag is een hobbyproject om nieuwslezers en journalisten te helpen. Overweeg een donatie! 
+          <a target="blank" className="buy-me-coffee" href="https://www.paypal.com/paypalme/davidduyff/1">&#127866; Geef een biertje</a>
         </div>
       </div>
     );

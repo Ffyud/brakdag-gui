@@ -10,7 +10,8 @@ class HomePagina extends Component {
       error: null,
       isLoaded: false,
       resultaten: [],
-      todayDate: null
+      todayDate: null,
+      resultatenAantal: 0
     };
   }
 
@@ -43,7 +44,8 @@ class HomePagina extends Component {
       (result) => {
         this.setState({
           isLoaded: true,
-          resultaten: result
+          resultaten: result,
+          resultatenAantal: result.length
         });
       },
       (error) => {
@@ -60,7 +62,8 @@ class HomePagina extends Component {
         (result) => {
           this.setState({
             isLoaded: true,
-            resultaten: result
+            resultaten: result,
+            resultatenAantal: result.length // fixen placeholder en nieuws van gisteren
           });
         },
         (error) => {

@@ -330,6 +330,9 @@ ul.lijst-item li.bron img {
   animation: fadeIn 1s;
   animation: pulse 2800ms ease-in-out infinite;
 }
+.lijst-item-placeholder:first-child {
+  margin-top: 30px;
+}
 
 .lijst-item-placeholder-small {
   position: relative;
@@ -339,7 +342,6 @@ ul.lijst-item li.bron img {
   margin-bottom: 10px;
   animation: fadeIn 1.5s;
   animation: pulse 2500ms ease-in-out infinite;
-
 }
 
 .lijst-item-logo-placeholder {
@@ -400,7 +402,35 @@ ul.lijst-item li.bron img {
   margin-right: 10px;
   vertical-align: middle;
 }
+.buy-me-coffee {
+  border-radius: 2px;
+  display: block;
+  background: #E87F5F;
+  color: #FFF;
+  padding: 5px;
+  margin: 15px auto;
+  max-width: 250px;
+  text-decoration: none;
+  font-weight: 600;
+  animation: delayedShow 500ms;
+  animation-delay: 2s;
+}
 
+.opac-8 { opacity: 0.8;}
+.opac-7 { opacity: 0.7;}
+.opac-6 { opacity: 0.6;}
+.opac-5 { opacity: 0.5;}
+.opac-4 { opacity: 0.4;}
+.opac-3 { opacity: 0.3;}
+.opac-2 { opacity: 0.2;}
+.opac-1 { opacity: 0.1;}
+
+@keyframes delayedShow {
+  0% {transform: scale(1);}
+  35% {transform: scale(0.95);}
+  65% {transform: scale(1.05);}
+  100% {transform: scale(1);}
+}
 @keyframes fadeInImg {
   0% {opacity: 0}
   100% {opacity: 1}
