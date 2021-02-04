@@ -76,9 +76,38 @@ ul.header-lijst li #logo {
   line-height: 35px;
   padding: 0px 0px 0px 0px;
   cursor: pointer;
-  z-index: 900;
+  z-index: 800;
   height: 35px;
   border-radius: 2px;
+  animation: showMe 500ms forwards;
+  opacity: 0;
+  animation-delay: 1s;
+}
+
+ul.header-lijst li #logo-tagline {
+  font-family: Staatliches;
+  color: #FDFBEF;
+  position: absolute;
+  font-size: 1.5em;
+  padding: 0px 0px 0px 0px;
+  cursor: pointer;
+  z-index: 900;
+  height: 35px;
+  top: 0px;
+  border-radius: 2px;
+  animation: goAway 300ms forwards;
+  animation-delay: 1s;
+}
+
+@keyframes goAway {
+  0% {top: 0px;}
+  100% { top: -100%;}
+}
+
+@keyframes showMe {
+  0% {opacity: 0; transform: scale(1);}
+  50% {transform: scale(1.05);}
+  100% { opacity: 1; transform: scale(1);} 
 }
 
 ul.header-lijst li #logo-small {
@@ -335,6 +364,7 @@ ul.lijst-item li.title {
 ul.lijst-item li.title a {
   cursor: pointer;
   font-weight: 600;
+  font-size: 1.1em;
   text-decoration: none;
   color: #000;
 }
@@ -445,6 +475,7 @@ ul.lijst-item li.bron img {
   margin-top: 0px;
   margin-bottom: 10px;
   padding: 10px;
+  font-family: Staatliches;
 }
 .box-flex div h2 i {
   margin-right: 10px;
@@ -460,7 +491,10 @@ ul.lijst-item li.bron img {
   max-width: 250px;
   text-decoration: none;
   font-weight: 600;
-  animation: delayedShow 500ms;
+  position: relative;
+  bottom: -50px;
+  opacity: 0;
+  animation: donateAttention 500ms forwards;
   animation-delay: 2s;
 }
 
@@ -473,11 +507,9 @@ ul.lijst-item li.bron img {
 .opac-2 { opacity: 0.2;}
 .opac-1 { opacity: 0.1;}
 
-@keyframes delayedShow {
-  0% {transform: scale(1);}
-  35% {transform: scale(0.95);}
-  65% {transform: scale(1.05);}
-  100% {transform: scale(1);}
+@keyframes donateAttention {
+  0% {opacity: 0; bottom: -25px; transform: scale(.9);}
+  100% { opacity: 1;bottom: 0px; transform: scale(1);}
 }
 @keyframes fadeInImg {
   0% {opacity: 0}
