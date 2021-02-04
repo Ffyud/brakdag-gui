@@ -16,13 +16,15 @@ html, body {
 .pagina-header {
   top: 60px;
   position: relative;
-  text-align: center;
-  padding: 0px 15px 10px 15px;
+  text-align: left;
+  padding: 0px 0px 10px 10px;
   color: #666;
   text-shadow: 0px 1px #FFFFFF82;
-  font-weight: 500;  
+  font-weight: 500;
   user-select: none;
-  animation: fadeIn 500ms;
+  animation: fadeIn 1s;
+  max-width: 640px;
+  margin: 0px auto;
 }
 
 #header {
@@ -232,22 +234,68 @@ ul.lijst-flex li div.flex-item {
   padding: 10px;
   background: #FFF;
   overflow: auto;
+  min-height: 140px;
+  animation: blip 500ms;
 }
+
+@keyframes blip {
+  0% { transform: scale(1);}
+  50% { transform: scale(1.005)}
+  100% { transform: scale(1);}
+}
+
+ul.lijst-flex li.lijst-next {
+  vertical-align: top;
+  min-width: auto;
+
+  padding: 0px 0px 0px 5px;
+  text-align: center;
+
+}
+ul.lijst-flex li.lijst-next div {
+  cursor: pointer;
+  background: #b2b49d6e;
+  font-size: 1.2em;
+  color: #666;
+  border-radius: 2px;
+  line-height: 30px;
+  width: 30px;
+  animation: margin-reverse 200ms;
+}
+ul.lijst-flex li.lijst-next div:hover {
+  background: #FFF;
+  color: #000;
+  margin-left: 2px;
+  animation: margin 200ms;
+}
+@keyframes margin {
+  0% { margin-left: 0px;}
+  100% { margin-left: 2px;}
+}
+
+@keyframes margin-reverse {
+  0% { margin-left: 2px;}
+  100% { margin-left: 0px;}
+}
+
+
 ul.lijst-flex li div.flex-item .bron img {
-  width: 35px;
-  height: 35px;
+  width: 25px;
+  height: 25px;
   padding: 0px 5px 0px 0px;
   position: relative;
   vertical-align: top;
   cursor: pointer;
   float: left;
 }
+ul.lijst-flex li div.flex-item .bron { height: 30px;}
 ul.lijst-flex li div.flex-item .title {
   user-select: text;
 }
 ul.lijst-flex li div.flex-item .title a {
   cursor: pointer;
-  font-weight: 400;
+  font-weight: 600;
+  font-size: 1.1em;
   text-decoration: none;
   color: #000;
 }
@@ -440,5 +488,9 @@ ul.lijst-item li.bron img {
   0% {background: #e4e4e4; }
   50% {background: #dfdfdf;}
   100% {background: #e4e4e4;}
+}
 
+@keyframes fadeIn {
+  0% {opacity: 0}
+  100% {opacity: 1}
 }

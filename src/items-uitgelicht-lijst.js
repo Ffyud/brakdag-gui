@@ -1,36 +1,50 @@
 import React, { Component } from 'react';
 
 class ItemsUitgelichtLijst extends Component {
+    constructor(props) {
+        super(props)
+        this.state = {
+            beginMap: 0,
+            eindeMap: 3
+        };
+
+    }
+
+    gaVerder = () => {
+        if (this.state.eindeMap === 10) {
+            this.setState({
+                beginMap: 0,
+                eindeMap: 3
+            });
+        }
+        else {
+            this.setState({
+                beginMap: this.state.beginMap + 1,
+                eindeMap: this.state.eindeMap + 1
+            });
+        }
+    }
+
     render() {
+        const { items } = this.props;
         return (
             <div id='wrap'>
                 <ul className='lijst-flex'>
-                    <li>
-                        <div className='flex-item'>
-                            <div className='bron'>
-                                <img alt='logo' src='http://localhost:3000/logos/logo_gic.png' />
+                    {items.slice(this.state.beginMap, this.state.eindeMap).map(item => (
+                        <li key={item['id']}>
+                            <div className='flex-item'>
+                                <div className='bron'>
+                                    <img alt={item['bron_title']} src={item['logo']} data-bron={item['bron_id']} />
+                                </div>
+                                <div className='title'>
+                                    <a target="blank" href={item['link']}>
+                                        {item['title']}
+                                    </a>
+                                </div>
                             </div>
-                            <div className='title'><a>Filmpje: de eerste online editie van ESNS in een notendop</a></div>
-                    </div>
-                    </li>
-                    <li>
-                        <div className='flex-item'>
-                        <div className='bron'>
-                                <img alt='logo' src='http://localhost:3000/logos/logo_rtvnoord.png' />
-                            </div>
-                            <div className='title'><a>Raadsleden diep teleurgesteld over N33: 'Treurig dat de regio de dupe wordt'</a></div>
-                            
-                    </div>
-                    </li>
-                    <li>
-                        <div className='flex-item'>
-                        <div className='bron'>
-                                <img alt='logo' src='http://localhost:3000/logos/logo_oog.png' />
-                            </div>
-                            <div className='title'><a>Gemeente: sportclubs kunnen ons bellen als ze problemen hebben</a></div>
-                            
-                    </div>
-                    </li>
+                        </li>
+                    ))}
+                    <li className='lijst-next'><div onClick={this.gaVerder}><i class="ri-arrow-right-line"></i></div></li>
                 </ul>
             </div>
         );

@@ -10,6 +10,8 @@ class HomePagina extends Component {
       error: null,
       isLoaded: false,
       resultaten: [],
+      resultatenUitgelicht: [],
+      resultatenAantalUitgelicht: 0,
       todayDate: null,
       resultatenAantal: 0
     };
@@ -22,8 +24,7 @@ class HomePagina extends Component {
   componentDidMount() {
     var today = new Date();
     const monthNames = ["januari", "februari", "maart", "april", "mei", "juni",
-  "juli", "augustus", "september", "october", "november", "december"
-];
+  "juli", "augustus", "september", "october", "november", "december"];
 
     const dayNames = ["zondag", "maandag", "dinsdag", "woensdag", "donderdag", "vrijdag", "zaterdag"]
 
@@ -37,6 +38,24 @@ class HomePagina extends Component {
     this.setState({
       todayDate: today
     });
+
+    fetch("http://127.0.0.1:5000/items/uitgelicht")
+    .then(res => res.json())
+    .then(
+      (result) => {
+        this.setState({
+          isLoaded: true,
+          resultatenUitgelicht: result,
+          resultatenAantalUitgelicht: result.length
+        });
+      },
+      (error) => {
+        this.setState({
+          isLoaded: true,
+          error
+        });
+      }
+    )
 
     fetch("http://127.0.0.1:5000/items")
     .then(res => res.json())
@@ -73,11 +92,11 @@ class HomePagina extends Component {
           });
         }
       )
-    }, 5000);
+    }, 10000);
   }
 
   render() {
-    const { error, isLoaded, resultaten } = this.state;
+    const { error, isLoaded, resultaten, resultatenUitgelicht } = this.state;
     if (error) {
       return <div>Niet goed gegaan: {error.message}</div>;
     } else if (!isLoaded) {
@@ -86,7 +105,7 @@ class HomePagina extends Component {
       return (
         <div>
           <div className="pagina-header">Uitgelicht</div>
-          <ItemsUitgelichtLijst />
+          <ItemsUitgelichtLijst items={resultatenUitgelicht} />
           <div className="pagina-header">Het nieuws van {this.state.todayDate}</div>
           <ItemsLijst items={resultaten} />
         </div>
