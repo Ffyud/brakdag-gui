@@ -137,6 +137,10 @@ ul.header-lijst li #logo-small:hover {
     display: none;
   }
 
+  ul.header-lijst li #logo-tagline {
+    display: none;
+  }
+
   ul.header-lijst li #logo-small {
     display: block;
   }
@@ -144,6 +148,22 @@ ul.header-lijst li #logo-small:hover {
   ul.header-lijst #header-logo {
     width: 43px;
   }
+
+  ul.lijst-flex {
+    display: inline-block;
+  }
+
+  ul.lijst-flex li {
+    min-width: auto !important;
+    display: table-row !important;
+  }
+
+  ul.lijst-flex li div.flex-item {
+    margin: 0px 0px 10px 0px !important;
+    min-height: auto !important;
+  }
+
+  
 }
 
 ul.header-lijst li #zoeken {
@@ -381,9 +401,9 @@ ul.lijst-item li.right {
 }
 ul.lijst-item li.right .whats-the-count {
   color: #7f8071;
-  padding: 15px;
+  padding: 15px 0px 15px 15px;
   font-weight: 600;
-  text-align: center;
+  text-align: right;
 }
 
 ul.lijst-item li.bron {
