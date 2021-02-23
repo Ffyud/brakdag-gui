@@ -12,6 +12,7 @@ import HomePagina from './home-pagina.js';
 import DatumPagina from './datum-pagina.js';
 import BronPagina from './bron-pagina.js';
 import BronOverzichtPagina from './bron-overzicht-pagina.js';
+import DatumVeld from './datum-veld.js';
 
 class BrakdagMenu extends Component{
     constructor(props) {
@@ -60,6 +61,7 @@ class BrakdagMenu extends Component{
                             </Link>
                         </li>
                         <li id="header-datum">
+                            {/* <DatumVeld /> */}
                             <Link to="/datum">
                                 <div id="datum-info"><i className="ri-history-line"></i></div>
                             </Link>

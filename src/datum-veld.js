@@ -52,12 +52,11 @@ class DatumVeld extends Component {
                     onChange={this.handleChange}
                     onCalendarClose={handleCalendarClose}
                     onCalendarOpen={handleCalendarOpen}
-                    onClickOutside={this.openDatePicker}
+                    // onClickOutside={this.openDatePicker}
                     open={this.state.datePickerIsOpen}
                     dateFormat="dd MMMM"
                     locale="nl"
                     />
-                    
                 </div>
             );
 

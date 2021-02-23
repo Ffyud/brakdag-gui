@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import ItemLijstPlaceholder from './placeholder/items-lijst-placeholder.js';
+import ItemsLijstPlaceholder from './placeholder/items-lijst-placeholder.js';
 import ItemsLijst from './items-lijst.js';
 
 class DatumPagina extends Component {
@@ -14,10 +14,17 @@ class DatumPagina extends Component {
     render() {
         const { onDatumOpdracht } = this.props;
 
-        return (
-            <div><ItemLijstPlaceholder /></div>
-            // <div><ItemsLijst items={onDatumOpdracht} /></div>
-        );
+        if(onDatumOpdracht === undefined) {
+            return <div><ItemsLijstPlaceholder /></div>;
+        }
+        else if(onDatumOpdracht.length ===  0) {
+            return <div><ItemsLijstPlaceholder /></div>;
+        }
+        else {
+            return (
+                <div><ItemsLijst items={onDatumOpdracht} /></div>
+            );
+        }
     }
 }
 
