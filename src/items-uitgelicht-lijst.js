@@ -44,7 +44,7 @@ class ItemsUitgelichtLijst extends Component {
                             </div>
                         </li>
                     ))}
-                    <li className='lijst-next'><div onClick={this.gaVerder}><i class="ri-arrow-right-line"></i></div></li>
+                    <li className='lijst-next'><div onClick={this.gaVerder}><i className="ri-arrow-right-line"></i></div></li>
                 </ul>
             </div>
         );
