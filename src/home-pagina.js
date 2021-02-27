@@ -39,7 +39,8 @@ class HomePagina extends Component {
       todayDate: today
     });
 
-    fetch("http://127.0.0.1:5000/items/uitgelicht")
+
+    fetch(process.env.REACT_APP_BRAKDAGFLASK+"/items/uitgelicht")
     .then(res => res.json())
     .then(
       (result) => {
@@ -57,7 +58,7 @@ class HomePagina extends Component {
       }
     )
 
-    fetch("http://127.0.0.1:5000/items")
+    fetch(process.env.REACT_APP_BRAKDAGFLASK+"/items")
     .then(res => res.json())
     .then(
       (result) => {
@@ -75,7 +76,7 @@ class HomePagina extends Component {
       }
     )
     this.interval = setInterval(() => {
-      fetch("http://127.0.0.1:5000/items")
+      fetch(process.env.REACT_APP_BRAKDAGFLASK+"/items")
       .then(res => res.json())
       .then(
         (result) => {

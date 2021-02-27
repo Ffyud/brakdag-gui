@@ -23,7 +23,7 @@ class BronOverzichtPagina extends Component {
       method: 'GET',
       headers: { 'Content-Type': 'application/json' },
     };
-    fetch("http://127.0.0.1:5000/items/statistics", requestOptions)
+    fetch("%REACT_APP_BRAKDAGFLASK%/items/statistics", requestOptions)
       .then(res => res.json())
       .then(
         (result) => {

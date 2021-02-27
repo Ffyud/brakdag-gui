@@ -26,7 +26,7 @@ class ZoekVeld extends Component {
                     headers: { 'Content-Type': 'application/json' },
                     body: JSON.stringify({ term: this.state.updateInput })
                 };
-                fetch("http://127.0.0.1:5000/items/zoeken", requestOptions)
+                fetch(process.env.REACT_APP_BRAKDAGFLASK + "/items/zoeken", requestOptions)
                     .then(res => res.json())
                     .then(
                         (result) => {
