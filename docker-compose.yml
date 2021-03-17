@@ -1,0 +1,7 @@
+version: '3.7'
+services:
+  brakdag-react:
+    container_name: brakdag-react
+    build: .
+    ports:
+      - '1337:81'
