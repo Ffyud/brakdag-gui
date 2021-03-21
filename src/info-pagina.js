@@ -8,7 +8,7 @@ class InfoPagina extends Component {
         <div className='box-wide'>
           Brakdag is een verzamelaar van het nieuws uit de stad Groningen en maakt het inzichtelijk.
         </div>
-        <div className='box-flex'>
+        {/* <div className='box-flex'>
           <div>
             <h2><i className="ri-search-eye-line ri-2x"></i><br />nieuws inzichtelijk</h2>
             <span>Bekijk het nieuws per datum, bron of zoek iets specifieks.</span>
@@ -25,11 +25,7 @@ class InfoPagina extends Component {
             <h2><i className="ri-open-source-line ri-2x"></i><br />open source</h2>
             <span>De volledige broncode van Brakdag is openbaar toegankelijk op Github.</span>
           </div>
-          {/* <div>
-            <h2><i className="ri-folder-download-line ri-2x"></i><br />open data</h2>
-            <span>Het volledige archief is te downloaden, als CSV, Parquet of Avro bestand.</span>
-          </div> */}
-        </div>
+        </div> */}
       </div>
     );
   }
