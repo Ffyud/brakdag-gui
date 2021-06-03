@@ -278,8 +278,8 @@ ul.lijst-flex li:last-child {
 }
 
 ul.lijst-flex li div.flex-item {
-  box-shadow: 0px 1px 0px 0px #B2B49D;
-  border-radius: 2px;
+  box-shadow: 0px 1px 2px -1px #B2B49D;
+  border-radius: 8px;
   padding: 10px;
   background: #FFF;
   overflow: auto;
@@ -306,7 +306,7 @@ ul.lijst-flex li.lijst-next div {
   background: #b2b49d6e;
   font-size: 1.2em;
   color: #666;
-  border-radius: 2px;
+  border-radius: 8px;
   line-height: 30px;
   width: 30px;
   animation: margin-reverse 200ms;
@@ -362,8 +362,8 @@ ul.lijst-item {
   list-style-type: none;
   position: relative;
   padding: 0px;
-  box-shadow: 0px 1px 0px 0px #B2B49D;
-  border-radius: 2px;
+  box-shadow: 0px 1px 2px -1px #B2B49D;
+  border-radius: 8px;
   background: #FFF;
   margin: 0px 0px 10px 0px;
   animation: fadeIn 500ms;
@@ -423,7 +423,7 @@ ul.lijst-item li.bron img {
   position: relative;
   height: 100px;
   background: #e4e4e4;
-  border-radius: 2px;
+  border-radius: 8px;
   margin-bottom: 10px;
   animation: fadeIn 1s;
   animation: pulse 2800ms ease-in-out infinite;
@@ -436,7 +436,7 @@ ul.lijst-item li.bron img {
   position: relative;
   height: 75px;
   background: #e4e4e4;
-  border-radius: 2px;
+  border-radius: 8px;
   margin-bottom: 10px;
   animation: fadeIn 1.5s;
   animation: pulse 2500ms ease-in-out infinite;
@@ -488,7 +488,7 @@ ul.lijst-item li.bron img {
   margin: 10px;
   max-width: 260px;
   padding: 10px 10px 10px 10px;
-  border-radius: 2px;
+  border-radius: 8px;
 }
 .box-flex div h2 {
   background: #F8C11E;
@@ -502,7 +502,7 @@ ul.lijst-item li.bron img {
   vertical-align: middle;
 }
 .buy-me-coffee {
-  border-radius: 2px;
+  border-radius: 8px;
   display: block;
   background: #E87F5F;
   color: #FFF;
