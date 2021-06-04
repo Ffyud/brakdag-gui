@@ -26,7 +26,7 @@ class HomePagina extends Component {
     const monthNames = ["januari", "februari", "maart", "april", "mei", "juni",
   "juli", "augustus", "september", "october", "november", "december"];
 
-    const dayNames = ["zondag", "maandag", "dinsdag", "woensdag", "donderdag", "vrijdag", "zaterdag"]
+    const dayNames = ["Zondag", "Maandag", "Dinsdag", "Woensdag", "Donderdag", "Vrijdag", "Zaterdag"]
 
     var weekdayNumber = today.getDay()
     var ddName = dayNames[weekdayNumber]
@@ -107,7 +107,7 @@ class HomePagina extends Component {
         <div>
           <div className="pagina-header">Uitgelicht</div>
           <ItemsUitgelichtLijst items={resultatenUitgelicht} />
-          <div className="pagina-header">Het nieuws van {this.state.todayDate}</div>
+          <div className="pagina-header">{this.state.todayDate}</div>
           <ItemsLijst items={resultaten} />
         </div>
       );

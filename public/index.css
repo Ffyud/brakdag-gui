@@ -154,6 +154,7 @@ ul.header-lijst li #logo-small:hover {
 
   ul.lijst-flex li {
     min-width: auto !important;
+    min-height: auto !important;
     display: table-row !important;
   }
 
@@ -161,7 +162,9 @@ ul.header-lijst li #logo-small:hover {
     margin: 0px 0px 10px 0px !important;
     min-height: auto !important;
   }
-
+  ul.lijst-flex li.lijst-next div{
+    line-height: 30px !important;
+  }
 }
 
 ul.header-lijst li #zoeken {
@@ -235,6 +238,7 @@ ul.lijst-flex li {
   display: table-cell;
   position: relative;
   min-width: 115px;
+  min-height: 160px;
   padding: 0px 5px 0px 5px;
   margin: 0px 0px 0px 0px;
 }
@@ -266,7 +270,7 @@ ul.lijst-flex li div.flex-item {
 ul.lijst-flex li.lijst-next {
   vertical-align: top;
   min-width: auto;
-
+  height: 160px;
   padding: 0px 0px 0px 5px;
   text-align: center;
 
@@ -277,7 +281,7 @@ ul.lijst-flex li.lijst-next div {
   font-size: 1.2em;
   color: #666;
   border-radius: 8px;
-  line-height: 30px;
+  line-height: 160px;
   width: 30px;
   animation: margin-reverse 200ms;
 }
