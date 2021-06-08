@@ -168,7 +168,7 @@ ul.header-lijst li #logo-small:hover {
 }
 
 ul.header-lijst li #zoeken {
-  border-radius: 2px;
+  border-radius: 8px;
   outline: none;
   border: none;
   padding: 0px 10px 0px 10px;
@@ -395,6 +395,13 @@ ul.lijst-item li.bron img {
   position: relative;
   vertical-align: top;
   cursor: pointer;
+}
+
+ul.lijst-item li.bron span {
+  color: #757575;
+  font-size: .7em;
+  display: block;
+  text-align: center;
 }
 
 .lijst-item-placeholder {

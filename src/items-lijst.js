@@ -16,7 +16,6 @@ class ItemsLijst extends Component {
   }
 
   render() {
-
     function MooieDescription(props) {
       var descKort = props.description.split(". ", 1);
       var descTrim = descKort[0].trim();
@@ -27,6 +26,14 @@ class ItemsLijst extends Component {
         descTrim += ".";
       }
       return <span>{descTrim}</span>;
+    }
+
+    function NetteTijd(props) {
+      var date = new Date(props.timestamp * 1000);
+      var hours = date.getHours();
+      var minutes = "0" + date.getMinutes();
+      var formattedTime = hours + ':' + minutes.substr(-2);
+      return <span>{formattedTime}</span>
     }
 
     const { items } = this.props;
@@ -40,6 +47,7 @@ class ItemsLijst extends Component {
                 <Link to={"/bron/" + item['bron_id']}>
                   <img alt={item['bron_title']} src={item['logo']} data-bron={item['bron_id']} />
                 </Link>
+                <NetteTijd timestamp={item['timestamp_publicatie']} />
                 </li>
                 <li className='title'>
                   <a target="blank" href={item['link']}>
