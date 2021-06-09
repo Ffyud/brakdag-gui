@@ -41,24 +41,26 @@ class ItemsLijst extends Component {
       <div id='wrap'>
         <ul className='lijst'>
           {items.map(item => (
-            <li key={item['id']}>
-              <ul className='lijst-item'>
-                <li className='bron'>
-                <Link to={"/bron/" + item['bron_id']}>
-                  <img alt={item['bron_title']} src={item['logo']} data-bron={item['bron_id']} />
-                </Link>
-                <NetteTijd timestamp={item['timestamp_publicatie']} />
-                </li>
-                <li className='title'>
-                  <a target="blank" href={item['link']}>
-                    {item['title']}
-                  </a>
-                  <div className='description'>
-                    <MooieDescription description={item['description']} />
-                  </div>
-                </li>
-              </ul>
-            </li>
+            <Link to={"/item/" + item['id']}>
+              <li key={item['id']}>
+                <ul className='lijst-item'>
+                  <li className='bron'>
+                  <Link to={"/bron/" + item['bron_id']}>
+                    <img alt={item['bron_title']} src={item['logo']} data-bron={item['bron_id']} />
+                  </Link>
+                  <NetteTijd timestamp={item['timestamp_publicatie']} />
+                  </li>
+                  <li className='title'>
+                    <a target="blank" href={item['link']}>
+                      {item['title']}
+                    </a>
+                    <div className='description'>
+                      <MooieDescription description={item['description']} />
+                    </div>
+                  </li>
+                </ul>
+              </li>
+            </Link>
           ))}
         </ul>
       </div>

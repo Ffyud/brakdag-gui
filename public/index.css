@@ -13,6 +13,10 @@ html, body {
   background: #EEE;
 }
 
+a {
+  text-decoration: none;
+}
+
 .pagina-header {
   top: 60px;
   position: relative;

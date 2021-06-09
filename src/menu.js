@@ -11,6 +11,7 @@ import ZoekPagina from './zoek-pagina.js';
 import HomePagina from './home-pagina.js';
 import DatumPagina from './datum-pagina.js';
 import BronPagina from './bron-pagina.js';
+import ItemsPagina from './items-pagina.js';
 import BronOverzichtPagina from './bron-overzicht-pagina.js';
 import DatumVeld from './datum-veld.js';
 
@@ -75,6 +76,7 @@ class BrakdagMenu extends Component{
                 </div>
                 <Switch>
                     <Route exact path="/bron/:bronId" component={BronPagina} />
+                    <Route exact path="/item/:itemId" component={ItemsPagina} />
                     <Route exact path="/">
                         <Thuis />
                     </Route>    
