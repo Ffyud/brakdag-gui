@@ -52,7 +52,7 @@ class BronOverzichtPagina extends Component {
     } else {
       return (
         <div>
-          <div className="pagina-header">Overzicht van de bronnen</div>
+          <header className="pagina-header">Overzicht van de bronnen</header>
           <div id='wrap'>
             <ul className='lijst'>
               {resultaten.map(item => (

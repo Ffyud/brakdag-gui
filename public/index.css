@@ -4,7 +4,7 @@ html {
 
 html, body {
   margin: 0px;
-  padding: 0px;
+  padding: 25px 0px 0px 0px;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
@@ -18,10 +18,12 @@ a {
 }
 
 .pagina-header {
-  top: 60px;
-  position: relative;
+  top: 50px;
+  position: sticky;
+  position: -webkit-sticky;
+  background: #EEE;
   text-align: left;
-  padding: 0px 0px 10px 10px;
+  padding: 15px 0px 10px 10px;
   color: #666;
   text-shadow: 0px 1px #FFFFFF82;
   font-weight: 500;
@@ -29,6 +31,7 @@ a {
   animation: fadeIn 1s;
   max-width: 640px;
   margin: 0px auto;
+  z-index: 900;
 }
 
 #header {
@@ -191,7 +194,7 @@ ul.header-lijst li #zoeken::placeholder {
 }
 
 ul.header-lijst li #info, #bron-info, #datum-info {
-  border-radius: 2px;
+  border-radius: 8px;
   height: 35px; 
   width: 35px;
   line-height: 35px;
@@ -215,10 +218,9 @@ ul.header-lijst li #info:hover, #bron-info:hover, #datum-info:hover {
 
 #wrap {
   position: relative;
-  top: 50px;
   max-width: 650px;
   margin: 0px auto;
-  padding: 10px 0px 10px 0px;
+  padding: 0px 0px 0px 0px;
   user-select: none;
 
 }

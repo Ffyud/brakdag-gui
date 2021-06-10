@@ -45,7 +45,7 @@ class BronPagina extends Component {
     } else {
       return (
         <div>
-          <div className="pagina-header">Het nieuws van {this.state.bronTitle}</div>
+          <header className="pagina-header">Het nieuws van {this.state.bronTitle}</header>
           <ItemsLijst items={resultaten} />
         </div>
       );
