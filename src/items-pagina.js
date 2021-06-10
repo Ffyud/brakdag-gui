@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import ItemsLijst from './items-lijst';
 import ItemLijstPlaceholder from './placeholder/items-lijst-placeholder.js';
 import {
   BrowserRouter as
@@ -10,7 +11,9 @@ class ItemsPagina extends Component {
     super(props)
     this.state = {
       error: null,
-      isLoaded: false
+      isLoaded: false,
+      resultatenVergelijking: [],
+      resultaatItem: []
     };
   }
 
@@ -21,14 +24,31 @@ class ItemsPagina extends Component {
       method: 'GET',
       headers: { 'Content-Type': 'application/json' },
     };
-    // TODO endpoint toevoegen
+
     fetch(`` + process.env.REACT_APP_BRAKDAGFLASK + `/items/${item}`, requestOptions)
       .then(res => res.json())
       .then(
         (result) => {
           this.setState({
             isLoaded: true,
-            resultaten: result
+            resultaatItem: result
+          });
+        },
+        (error) => {
+          this.setState({
+            isLoaded: true,
+            error
+          });
+        }
+      )
+
+    fetch(`` + process.env.REACT_APP_BRAKDAGFLASK + `/items/vergelijkbaar/${item}`, requestOptions)
+      .then(res => res.json())
+      .then(
+        (result) => {
+          this.setState({
+            isLoaded: true,
+            resultatenVergelijking: result
           });
         },
         (error) => {
@@ -41,8 +61,8 @@ class ItemsPagina extends Component {
   }
 
   render() {
-    const { error, isLoaded, resultaten } = this.state;
-    if (error || !isLoaded || resultaten.length === 0) {
+    const { error, isLoaded, resultaatItem, resultatenVergelijking } = this.state;
+    if (error || !isLoaded || resultaatItem.length === 0) {
       return <div><ItemLijstPlaceholder /></div>;
     } else {
       return (
@@ -50,7 +70,7 @@ class ItemsPagina extends Component {
           <div className="pagina-header">Artikel</div>
           <div id='wrap'>
             <ul className='lijst'>
-              {resultaten.map(item => (
+              {resultaatItem.map(item => (
                 <li key={item['id']}>
                   <ul className='lijst-item'>
                     <li className='bron'>
@@ -72,9 +92,7 @@ class ItemsPagina extends Component {
             </ul>
           </div>
           <div className="pagina-header">Vergelijkbaar</div>
-          <div id="wrap">Niks vergelijkbaars gevonden!</div>
-          <div className="pagina-header">Meer van RTVnoord</div>
-          <div id="wrap">Niks vergelijkbaars gevonden!</div>
+          <ItemsLijst items={resultatenVergelijking} />
         </div>
 
       );
