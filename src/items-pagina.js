@@ -61,6 +61,15 @@ class ItemsPagina extends Component {
   }
 
   render() {
+
+    function NetteTijd(props) {
+      var date = new Date(props.timestamp * 1000);
+      var hours = date.getHours();
+      var minutes = "0" + date.getMinutes();
+      var formattedTime = hours + ':' + minutes.substr(-2);
+      return <span>{formattedTime}</span>
+    }
+
     const { error, isLoaded, resultaatItem, resultatenVergelijking } = this.state;
     if (error || !isLoaded || resultaatItem.length === 0) {
       return <div><ItemLijstPlaceholder /></div>;
@@ -77,6 +86,7 @@ class ItemsPagina extends Component {
                       <Link to={"/bron/" + item['bron_id']}>
                         <img alt={item['bron_title']} src={item['logo']} data-bron={item['bron_id']} />
                       </Link>
+                      <NetteTijd timestamp={item['timestamp_publicatie']} />
                     </li>
                     <li className='title'>
                       <a target="blank" href={item['link']}>
