@@ -1,4 +1,10 @@
 import React, { Component } from 'react';
+import {
+    BrowserRouter as Router,
+    Switch,
+    Route,
+    Link
+  } from 'react-router-dom';
 
 class ItemsUitgelichtLijst extends Component {
     constructor(props) {
@@ -32,6 +38,7 @@ class ItemsUitgelichtLijst extends Component {
                 <ul className='lijst-flex'>
                     {items.slice(this.state.beginMap, this.state.eindeMap).map(item => (
                         <li key={item['id']}>
+                            <Link to={"/item/" + item['id']}>
                             <div className='flex-item'>
                                 <div className='bron'>
                                     <img alt={item['bron_title']} src={item['logo']} data-bron={item['bron_id']} />
@@ -42,6 +49,7 @@ class ItemsUitgelichtLijst extends Component {
                                     </a>
                                 </div>
                             </div>
+                            </Link>
                         </li>
                     ))}
                     <li className='lijst-next'><div onClick={this.gaVerder}><i className="ri-arrow-right-line"></i></div></li>
