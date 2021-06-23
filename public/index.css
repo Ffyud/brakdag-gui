@@ -456,6 +456,18 @@ ul.lijst-item li.bron span {
   user-select: none;
 }
 
+.server-fout-placeholder {
+  text-align: center;
+  color: #131313;
+}
+.server-fout-placeholder i {
+  color: #CCC;
+  font-size: 13em;
+}
+.server-fout-placeholder h5 {
+  color: #CCC;
+}
+
 .box-wide {
   padding: 10px;
   font-size: 1.2em;
