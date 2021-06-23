@@ -104,14 +104,23 @@ class HomePagina extends Component {
     } else if (!isLoaded) {
       return <div><ItemsLijstPlaceholder /></div>;
     } else {
-      return (
+      if(resultatenUitgelicht.length !== 0) {
+        return (
         <div>
           <header className="pagina-header">Uitgelicht</header>
           <ItemsUitgelichtLijst items={resultatenUitgelicht} />
           <header className="pagina-header">{this.state.todayDate}</header>
           <ItemsLijst items={resultaten} />
+        </div>);
+      }
+      else {
+      return (
+        <div>
+          <header className="pagina-header">{this.state.todayDate}</header>
+          <ItemsLijst items={resultaten} />
         </div>
       );
+      }
     }
   }
 }
