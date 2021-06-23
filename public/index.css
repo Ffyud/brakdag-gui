@@ -419,7 +419,7 @@ ul.lijst-item li.bron span {
   animation: pulse 2800ms ease-in-out infinite;
 }
 .lijst-item-placeholder:first-child {
-  margin-top: 30px;
+  margin-top: 44px;
 }
 
 .lijst-item-placeholder-small {
