@@ -7,6 +7,7 @@ import {
 } from 'react-router-dom';
 import ItemsLijstPlaceholder from './placeholder/items-lijst-placeholder.js';
 import BronPagina from './bron-pagina';
+import ServerFoutPlaceholder from './placeholder/server-fout-placeholder.js';
 
 class BronOverzichtPagina extends Component {
   constructor(props) {
@@ -46,7 +47,7 @@ class BronOverzichtPagina extends Component {
     const { resultaten, isLoaded, error } = this.state;
 
     if (error) {
-      return <div>Niet goed gegaan: {error.message}</div>;
+      return <div><ServerFoutPlaceholder message={error.message} /></div>;
     } else if (!isLoaded) {
       return <div><ItemsLijstPlaceholder /></div>;
     } else {

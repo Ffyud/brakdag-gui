@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import ItemsLijst from './items-lijst.js';
 import ItemsUitgelichtLijst from './items-uitgelicht-lijst';
 import ItemsLijstPlaceholder from './placeholder/items-lijst-placeholder.js';
+import ServerFoutPlaceholder from './placeholder/server-fout-placeholder.js';
 
 class HomePagina extends Component {
   constructor(props) {
@@ -99,7 +100,7 @@ class HomePagina extends Component {
   render() {
     const { error, isLoaded, resultaten, resultatenUitgelicht } = this.state;
     if (error) {
-      return <div>Niet goed gegaan: {error.message}</div>;
+      return <div><ServerFoutPlaceholder message={error.message} /></div>;
     } else if (!isLoaded) {
       return <div><ItemsLijstPlaceholder /></div>;
     } else {
