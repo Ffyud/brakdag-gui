@@ -2,8 +2,10 @@ import React, { Component } from 'react';
 import ItemsLijst from './items-lijst';
 import ItemLijstPlaceholder from './placeholder/items-lijst-placeholder.js';
 import {
-  BrowserRouter as
-    Link
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link
 } from 'react-router-dom';
 
 class ItemsPagina extends Component {
