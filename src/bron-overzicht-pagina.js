@@ -57,7 +57,7 @@ class BronOverzichtPagina extends Component {
           <div id='wrap'>
             <ul className='lijst'>
               {resultaten.map(item => (
-                <li>
+                <li key={item['id']}>
                   <Link to={"/bron/" + item['id']}>
                     <ul className='lijst-item'>
                       <li className='bron'>
