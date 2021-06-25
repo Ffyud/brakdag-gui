@@ -47,7 +47,6 @@ class BrakdagMenu extends Component{
                         <li id="header-logo">
                             <Link to="/">
                                 <div id="logo">Brakdag</div>
-                                <div id="logo-tagline">GRUNN &#128154;</div>
                                 <div id="logo-small">BD</div>
                                 </Link>
                         </li>

@@ -91,26 +91,6 @@ ul.header-lijst li #logo {
   animation-delay: 1s;
 }
 
-ul.header-lijst li #logo-tagline {
-  font-family: Staatliches;
-  color: #FDFBEF;
-  position: absolute;
-  font-size: 1.95em;
-  padding: 0px 0px 0px 0px;
-  cursor: pointer;
-  z-index: 900;
-  height: 35px;
-  top: 0px;
-  border-radius: 2px;
-  animation: goAway 300ms forwards;
-  animation-delay: 1s;
-}
-
-@keyframes goAway {
-  0% {top: 0px;}
-  100% { top: -100%;}
-}
-
 @keyframes showMe {
   0% {opacity: 0; transform: scale(1);}
   50% {transform: scale(1.05);}
