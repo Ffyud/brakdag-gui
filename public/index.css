@@ -23,12 +23,13 @@ a {
   position: -webkit-sticky;
   background: #EEE;
   text-align: left;
-  padding: 15px 0px 10px 10px;
-  color: #666;
+  padding: 10px 0px 10px 10px;
+  color: #626262;
   text-shadow: 0px 1px #FFFFFF82;
   font-weight: 500;
   user-select: none;
   animation: fadeIn 1s;
+  font-size: 1.1em;
   max-width: 640px;
   margin: 0px auto;
   z-index: 900;
@@ -238,7 +239,7 @@ ul.lijst-flex li:last-child {
 }
 
 ul.lijst-flex li div.flex-item {
-  box-shadow: 0px 1px 2px -1px #B2B49D;
+  box-shadow: 0px 1px 2px -1px #B0B0B0;
   border-radius: 8px;
   padding: 10px;
   background: #FFF;
@@ -322,7 +323,7 @@ ul.lijst-item {
   list-style-type: none;
   position: relative;
   padding: 0px;
-  box-shadow: 0px 1px 2px -1px #B2B49D;
+  box-shadow: 0px 1px 2px -1px #B0B0B0;
   border-radius: 8px;
   background: #FFF;
   margin: 0px 0px 10px 0px;
