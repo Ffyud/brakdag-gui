@@ -117,10 +117,12 @@ class ItemsPagina extends Component {
               ))}
             </ul>
           </div>
+          {resultatenVergelijking.length > 0 &&
+          <div>
           <div className="pagina-header">Vergelijkbaar</div>
-          <ItemsLijst items={resultatenVergelijking} />
+          <ItemsLijst items={resultatenVergelijking} /></div>
+          }
         </div>
-
       );
     }
   }
