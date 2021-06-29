@@ -14,20 +14,30 @@ class ItemsPagina extends Component {
     this.state = {
       error: null,
       isLoaded: false,
+      itemId: this.props.match.params.itemId,
       resultatenVergelijking: [],
       resultaatItem: []
     };
   }
 
-  componentDidMount() {
-    let item = this.props.match.params.itemId;
 
+  componentDidUpdate() {
+    console.log("update !! id is " + this.state.itemId);
+    console.log("En dit staat in de url " + this.props.match.params.itemId);
+    if (this.state.itemId !== this.props.match.params.itemId) {
+      console.log("state wordt geupdate")
+      this.restCall(this.props.match.params.itemId)
+      this.setState({ itemId: this.props.match.params.itemId });
+    }
+  }
+
+  restCall = (itemId) => {
     const requestOptions = {
       method: 'GET',
       headers: { 'Content-Type': 'application/json' },
     };
 
-    fetch(`` + process.env.REACT_APP_BRAKDAGFLASK + `/items/${item}`, requestOptions)
+    fetch(`` + process.env.REACT_APP_BRAKDAGFLASK + `/items/${itemId}`, requestOptions)
       .then(res => res.json())
       .then(
         (result) => {
@@ -44,7 +54,7 @@ class ItemsPagina extends Component {
         }
       )
 
-    fetch(`` + process.env.REACT_APP_BRAKDAGFLASK + `/items/vergelijkbaar/${item}`, requestOptions)
+    fetch(`` + process.env.REACT_APP_BRAKDAGFLASK + `/items/vergelijkbaar/${itemId}`, requestOptions)
       .then(res => res.json())
       .then(
         (result) => {
@@ -60,6 +70,10 @@ class ItemsPagina extends Component {
           });
         }
       )
+  }
+
+  componentDidMount() {
+    this.restCall(this.state.itemId)
   }
 
   render() {
