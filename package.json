@@ -10,7 +10,7 @@
     "@testing-library/user-event": "^12.2.2",
     "nivo": "^0.31.0",
     "react": "^17.0.1",
-    "react-datepicker": "^3.3.0",
+    "react-datepicker": "^3.8.0",
     "react-dom": "^17.0.1",
     "react-router-dom": "^5.2.0",
     "react-scripts": "4.0.0",
