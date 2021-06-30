@@ -20,12 +20,8 @@ class ItemsPagina extends Component {
     };
   }
 
-
   componentDidUpdate() {
-    console.log("update !! id is " + this.state.itemId);
-    console.log("En dit staat in de url " + this.props.match.params.itemId);
     if (this.state.itemId !== this.props.match.params.itemId) {
-      console.log("state wordt geupdate")
       this.restCall(this.props.match.params.itemId)
       this.setState({ itemId: this.props.match.params.itemId });
     }
