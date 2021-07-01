@@ -5,7 +5,6 @@ import {
     Route,
     Link
 } from 'react-router-dom';
-import InfoPagina from './info-pagina.js';
 import ZoekVeld from './zoek-veld.js';
 import ZoekPagina from './zoek-pagina.js';
 import HomePagina from './home-pagina.js';
@@ -13,6 +12,7 @@ import DatumPagina from './datum-pagina.js';
 import BronPagina from './bron-pagina.js';
 import ItemsPagina from './items-pagina.js';
 import BronOverzichtPagina from './bron-overzicht-pagina.js';
+import Footer from './footer.js';
 
 class BrakdagMenu extends Component{
     constructor(props) {
@@ -49,11 +49,6 @@ class BrakdagMenu extends Component{
                                 <div id="logo-small">BD</div>
                                 </Link>
                         </li>
-                        <li id="header-info">
-                            <Link to="/info">
-                                <div id="info"><i className="ri-information-line"></i></div>
-                            </Link>
-                        </li>
                         <li id="header-bron">
                             <Link to="/bronnen">
                                 <div id="bron-info"><i className="ri-newspaper-line"></i></div>
@@ -86,11 +81,9 @@ class BrakdagMenu extends Component{
                     <Route exact path="/zoeken">
                         <ZoekPagina onZoekOpdracht={zoekResultaten} />
                     </Route>
-                    <Route exact path="/info">
-                        <Info />
-                    </Route>
                 </Switch>
-    
+                <Footer />
+
             </Router>
         );
     }
@@ -102,11 +95,5 @@ export default BrakdagMenu;
 function Thuis() {
     return (
         <HomePagina />
-    );
-}
-
-function Info() {
-    return (
-        <InfoPagina />
     );
 }
