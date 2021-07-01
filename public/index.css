@@ -25,14 +25,62 @@ a {
   text-align: left;
   padding: 10px 0px 10px 10px;
   color: #626262;
+  font-weight: 500;
+  user-select: none;
+  animation: fadeIn 1s;
+  font-size: 1.1em;
+  max-width: 690px;
+  margin: 0px auto;
+  z-index: 800;
+}
+
+.pagina-header-date-pick {
+  top: 50px;
+  position: sticky;
+  position: -webkit-sticky;
+  background: #EEE;
+  text-align: left;
+  padding: 10px 0px 10px 10px;
+  color: #626262;
   text-shadow: 0px 1px #FFFFFF82;
   font-weight: 500;
   user-select: none;
   animation: fadeIn 1s;
   font-size: 1.1em;
-  max-width: 640px;
+  max-width: 690px;
   margin: 0px auto;
   z-index: 900;
+}
+
+.pagina-header-date-pick input[type=date] {
+  border: none;
+  background: none;
+  font-family: inherit;
+  font-size: inherit;
+  color: inherit;
+  cursor: pointer;
+  padding: 0px;
+}
+
+#footer {
+  bottom: 0px;
+  position: relative;
+  background: #EEE;
+  color: #626262;
+  text-shadow: 0px 1px #FFFFFF82;
+  text-align: center;
+  padding: 100px 0px 50px 0px;
+  animation: fadeInDelayed 3s;
+}
+
+#footer .logo {
+  font-family: Staatliches;
+  text-shadow: 0px 1px #FFF;
+  font-size: 2.345em;
+}
+#footer .logo-tag {
+  max-width: 300px;
+  margin: 0px auto;
 }
 
 #header {
@@ -42,7 +90,7 @@ a {
   padding: 0px 0px 0px 0px;
   top: 0px;
   position: fixed;
-  z-index: 800;
+  z-index: 900;
   user-select: none;
 }
 
@@ -50,7 +98,7 @@ ul.header-lijst {
   display: table;
   list-style-type: none;
   width: 100%;
-  max-width: 650px;
+  max-width: 700px;
   height: 50px;
   margin: 0px auto;
   padding: 0px;
@@ -199,7 +247,7 @@ ul.header-lijst li #info:hover, #bron-info:hover, #datum-info:hover {
 
 #wrap {
   position: relative;
-  max-width: 650px;
+  max-width: 700px;
   margin: 0px auto;
   padding: 0px 0px 0px 0px;
   user-select: none;
@@ -427,14 +475,15 @@ ul.lijst-item li.bron span {
 
 .niet-gezocht-placeholder {
   position: absolute;
-  top: 100px;
+  top: 45%;
   width: 250px;
   text-align: center;
   font-size: 1.2em;
   left: calc(50% - 125px);
   color: #131313;
-  font-weight: 600;
   user-select: none;
+  background: #EEE;
+  box-shadow: 0px 0px 50px 50px #EEE;
 }
 
 .server-fout-placeholder {
@@ -458,6 +507,9 @@ ul.lijst-item li.bron span {
   margin: 0px auto;
   max-width: 500px;
   user-select: none;
+  background: #FFF;
+  z-index: 800;
+  position: relative;
 }
 
 .box-flex {
@@ -529,3 +581,10 @@ ul.lijst-item li.bron span {
   0% {opacity: 0}
   100% {opacity: 1}
 }
+
+@keyframes fadeInDelayed {
+  0% {opacity: 0}
+  75% {opacity: 0}
+  100% {opacity: 1}
+}
+
