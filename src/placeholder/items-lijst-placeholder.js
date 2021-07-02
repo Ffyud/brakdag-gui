@@ -4,7 +4,7 @@ class ItemLijstPlaceholder extends Component {
 
   render() {
     return (
-      <div id='wrap' className='wrap-fixed'>
+      <div id='wrap'>
         <ul className='lijst'>
             <li>
               <div className='lijst-item-placeholder'><div className="lijst-item-logo-placeholder"></div></div>

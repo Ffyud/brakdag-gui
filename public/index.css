@@ -251,14 +251,6 @@ ul.header-lijst li #info:hover, #bron-info:hover, #datum-info:hover {
   margin: 0px auto;
   padding: 0px 0px 0px 0px;
   user-select: none;
-
-}
-.wrap-fixed {
-  position: fixed !important;
-  width: 100%;
-  left: 50%;
-  transform: translate(-50%, 0);
-  user-select: none;
 }
 
 /* Compacte lijst met items naar elkaar */
