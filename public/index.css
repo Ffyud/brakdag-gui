@@ -64,6 +64,7 @@ a {
 
 #footer {
   bottom: 0px;
+  user-select: none;
   position: relative;
   background: #EEE;
   color: #626262;
@@ -353,6 +354,7 @@ ul.lijst-flex li div.flex-item .title a:hover {
   text-decoration: underline;
 }
 
+
 /* Grote lijst met items onder elkaar */
 ul.lijst {
   list-style-type: none;
@@ -381,7 +383,7 @@ ul.lijst-item li.title {
   width: 100%;
   user-select: text;
 }
-ul.lijst-item li.title a {
+ul.lijst-item li.title a.title-ref {
   cursor: pointer;
   font-weight: 600;
   font-size: 1.1em;
@@ -389,7 +391,7 @@ ul.lijst-item li.title a {
   color: #000;
 }
 
-ul.lijst-item li.title a:hover {
+ul.lijst-item li.title a.title-ref:hover {
   text-decoration: underline;
 }
 
@@ -398,6 +400,11 @@ ul.lijst-item .description {
   font-weight: 400;
   user-select: text;
   word-break: break-word;
+}
+
+ul.lijst-item .description a {
+  text-decoration: none;
+  color: #6B6C5B;
 }
 
 ul.lijst-item li.right {

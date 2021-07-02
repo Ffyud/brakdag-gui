@@ -101,7 +101,7 @@ class ItemsPagina extends Component {
                       <NetteTijd timestamp={item['timestamp_publicatie']} />
                     </li>
                     <li className='title'>
-                      <a target="blank" href={item['link']}>
+                      <a className='title-ref' target="blank" href={item['link']}>
                         {item['title']}
                       </a>
                       <div className='description'>

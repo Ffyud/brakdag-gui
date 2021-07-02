@@ -41,7 +41,6 @@ class ItemsLijst extends Component {
       <div id='wrap'>
         <ul className='lijst'>
           {items.map(item => (
-            <Link to={"/item/" + item['id']}>
               <li key={item['id']}>
                 <ul className='lijst-item'>
                   <li className='bron'>
@@ -51,16 +50,17 @@ class ItemsLijst extends Component {
                   <NetteTijd timestamp={item['timestamp_publicatie']} />
                   </li>
                   <li className='title'>
-                    <a target="blank" href={item['link']}>
+                    <a className='title-ref' target="blank" href={item['link']}>
                       {item['title']}
                     </a>
-                    <div className='description'>
-                      <MooieDescription description={item['description']} />
-                    </div>
+                    <Link to={"/item/" + item['id']}>
+                      <div className='description'>
+                          <MooieDescription description={item['description']} />
+                      </div>
+                      </Link>
                   </li>
                 </ul>
               </li>
-            </Link>
           ))}
         </ul>
       </div>
