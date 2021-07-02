@@ -405,6 +405,7 @@ ul.lijst-item .description {
   color: #6B6C5B;
   font-weight: 400;
   user-select: text;
+  word-break: break-word;
 }
 
 ul.lijst-item li.right {
