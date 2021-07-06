@@ -64,7 +64,7 @@ class BronOverzichtPagina extends Component {
                             <img alt={item['bron_title']} src={item['logo']} data-bron={item['bron_id']} />
                       </li>
                       <li className='title'>
-                        <a target="blank" href={item['link_home']}>{item['title']}</a>
+                        <a className='title-ref' target="blank" href={item['link_home']}>{item['title']}</a>
                         <div className='description'>
                           {item['description']}
                         </div>
