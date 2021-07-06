@@ -109,7 +109,10 @@ class HomePagina extends Component {
         <div>
           <header className="pagina-header">Uitgelicht</header>
           <ItemsUitgelichtLijst items={resultatenUitgelicht} />
-          <header className="pagina-header">{this.state.todayDate}</header>
+          <header className="pagina-header">
+            {this.state.todayDate}
+            <span className="pagina-header-sub">{resultaten.length} artikelen</span>
+          </header>
           <ItemsLijst items={resultaten} />
         </div>);
       }

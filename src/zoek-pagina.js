@@ -26,7 +26,10 @@ class ZoekPagina extends Component {
         else {
             return (
                 <div>
-                    <header className="pagina-header">Zoekresultaten</header>
+                    <header className="pagina-header">
+                        Zoekresultaten
+                        <span className="pagina-header-sub">{onZoekOpdracht.length} artikelen</span>
+                    </header>
                     <ItemsLijst items={onZoekOpdracht} />
                 </div>
             );

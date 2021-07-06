@@ -24,7 +24,7 @@ a {
   background: #EEE;
   text-align: left;
   padding: 10px 0px 10px 10px;
-  color: #626262;
+  color: #444;
   font-weight: 500;
   user-select: none;
   animation: fadeIn 1s;
@@ -32,6 +32,12 @@ a {
   max-width: 690px;
   margin: 0px auto;
   z-index: 800;
+}
+
+.pagina-header-sub {
+  font-size: .7em;
+  padding: 0px 0px 0px 5px;
+  color: #666565;
 }
 
 .pagina-header-date-pick {
@@ -66,12 +72,14 @@ a {
   bottom: 0px;
   user-select: none;
   position: relative;
-  background: #EEE;
-  color: #626262;
+  color: #444;
   text-shadow: 0px 1px #FFFFFF82;
   text-align: center;
-  padding: 100px 0px 50px 0px;
+  padding: 100px 0px 100px 0px;
   animation: fadeInDelayed 3s;
+  background: #7777771C;
+  height: calc(100vh - 250px);
+  margin-top: 50px;
 }
 
 #footer .logo {
@@ -220,7 +228,7 @@ ul.header-lijst li #zoeken {
 ul.header-lijst li #zoeken::placeholder {
   font-size: .8em;
   font-weight: 600;
-  color: #7b7b7b;
+  color: #444;
 }
 
 ul.header-lijst li #info, #bron-info, #datum-info {
