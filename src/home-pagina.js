@@ -18,10 +18,6 @@ class HomePagina extends Component {
     };
   }
 
-  componentWillUnmount() {
-    clearInterval(this.interval);
-  }
-
   componentDidMount() {
     var today = new Date();
     const monthNames = ["januari", "februari", "maart", "april", "mei", "juni",
@@ -39,7 +35,6 @@ class HomePagina extends Component {
     this.setState({
       todayDate: today
     });
-
 
     fetch(process.env.REACT_APP_BRAKDAGFLASK+"/items/uitgelicht")
     .then(res => res.json())
@@ -76,25 +71,7 @@ class HomePagina extends Component {
         });
       }
     )
-    this.interval = setInterval(() => {
-      fetch(process.env.REACT_APP_BRAKDAGFLASK+"/items")
-      .then(res => res.json())
-      .then(
-        (result) => {
-          this.setState({
-            isLoaded: true,
-            resultaten: result,
-            resultatenAantal: result.length // fixen placeholder en nieuws van gisteren
-          });
-        },
-        (error) => {
-          this.setState({
-            isLoaded: true,
-            error
-          });
-        }
-      )
-    }, 10000);
+
   }
 
   render() {
