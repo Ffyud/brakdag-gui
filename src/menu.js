@@ -35,10 +35,10 @@ class BrakdagMenu extends Component{
         });
     }
 
+    
     render() {
         const zoekResultaten = this.state.zoekResultaten;
         const datumResultaten = this.state.datumResultaten;
-
         return (
             <Router>
                 <div id="header">
@@ -47,7 +47,7 @@ class BrakdagMenu extends Component{
                             <Link to="/">
                                 <div id="logo">Brakdag</div>
                                 <div id="logo-small">BD</div>
-                                </Link>
+                            </Link>
                         </li>
                         <li id="header-bron">
                             <Link to="/bronnen">
@@ -70,7 +70,7 @@ class BrakdagMenu extends Component{
                     <Route exact path="/bron/:bronId" component={BronPagina} />
                     <Route exact path="/item/:itemId" component={ItemsPagina} />
                     <Route exact path="/">
-                        <Thuis />
+                        <Thuis/>
                     </Route>    
                     <Route exact path="/bronnen">
                         <BronOverzichtPagina />
