@@ -45,7 +45,10 @@ class BronPagina extends Component {
     } else {
       return (
         <div>
-          <header className="pagina-header">{this.state.bronTitle}</header>
+          <header className="pagina-header">
+            {this.state.bronTitle}
+            <span className="pagina-header-sub">laatste {resultaten.length} artikelen</span>  
+          </header>
           <ItemsLijst items={resultaten} />
         </div>
       );
