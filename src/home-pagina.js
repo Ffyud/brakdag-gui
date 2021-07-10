@@ -14,7 +14,8 @@ class HomePagina extends Component {
       resultatenUitgelicht: [],
       resultatenAantalUitgelicht: 0,
       todayDate: null,
-      resultatenAantal: 0
+      resultatenAantal: 0,
+      aKey: false
     };
   }
 
