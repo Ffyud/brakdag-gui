@@ -5,7 +5,7 @@ class NietGezochtPlaceholder extends Component {
   render() {
     return (
       <div className='niet-gezocht-placeholder'>
-        Doorzoek het archief met meer dan 200.000 artikelen over Stad Groningen.
+        Doorzoek het nieuwsarchief van 2016 tot nu.
       </div>
     );
   }
