@@ -30,13 +30,11 @@ class ZoekVeld extends Component {
                     .then(res => res.json())
                     .then(
                         (result) => {
-                            console.log(result)
                             this.setState({
                                 isLoaded: true,
                                 resultaten: result
                             });
                             this.zoekOpdracht()
-    
                         },
                         (error) => {
                             this.setState({
@@ -60,6 +58,7 @@ class ZoekVeld extends Component {
                 this.zoekOpdracht()
             }
         }
+
     }
 
     render() {
@@ -93,7 +92,7 @@ class ZoekVeld extends Component {
                 fontColor: "#000"
             });
         }
-
+        
         return <div><input placeholder='ZOEKEN' style={{ color: this.state.fontColor,backgroundColor: this.state.backgroundColor}} id='zoeken' type='text' onChange={handleInput} onKeyDown={handleKeyDown} onBlur={doeRustig} onFocus={doeActief}/></div>;
     }
 }

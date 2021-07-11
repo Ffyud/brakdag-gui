@@ -16,7 +16,6 @@ class ZoekPagina extends Component {
 
     render() {
         const { onZoekOpdracht } = this.props;
-        console.log(onZoekOpdracht);
         if(onZoekOpdracht === undefined) {
             return <div><ItemsLijstPlaceholder /><NietGezochtPlaceholder /></div>;
         }
