@@ -17,10 +17,16 @@ class ZoekPagina extends Component {
     render() {
         const { onZoekOpdracht } = this.props;
         if(onZoekOpdracht === undefined) {
-            return <div><ItemsLijstPlaceholder /><NietGezochtPlaceholder /></div>;
+            return <div>
+                <header className="pagina-header"></header>
+                <ItemsLijstPlaceholder /><NietGezochtPlaceholder />
+                </div>;
         }
         else if(onZoekOpdracht.length ===  0) {
-            return <div><ItemsLijstPlaceholder /><NiksGevondenPlaceholder /></div>;
+            return <div>
+                <header className="pagina-header"></header>
+                <ItemsLijstPlaceholder /><NiksGevondenPlaceholder />
+                </div>;
         }
         else {
             return (
