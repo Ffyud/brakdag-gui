@@ -18,8 +18,7 @@ class BrakdagMenu extends Component{
     constructor(props) {
         super(props)
         this.state = {
-            zoekResultaten: undefined,
-            datumResultaten: []
+            zoekResultaten: undefined
         }
     }
 
@@ -28,17 +27,9 @@ class BrakdagMenu extends Component{
             zoekResultaten: resultaten
         });
     }
-
-    datumOpdracht = (resultaten) => {
-        this.setState({
-            datumResultaten: resultaten
-        });
-    }
-
     
     render() {
         const zoekResultaten = this.state.zoekResultaten;
-        const datumResultaten = this.state.datumResultaten;
         return (
             <Router>
                 <div id="header">
@@ -76,7 +67,7 @@ class BrakdagMenu extends Component{
                         <BronOverzichtPagina />
                     </Route>
                     <Route exact path="/datum">
-                        <DatumPagina onDatumOpdracht={datumResultaten} />
+                        <DatumPagina/>
                     </Route>
                     <Route exact path="/zoeken">
                         <ZoekPagina onZoekOpdracht={zoekResultaten} />
