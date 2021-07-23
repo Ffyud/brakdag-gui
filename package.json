@@ -8,6 +8,7 @@
     "@testing-library/jest-dom": "^5.11.6",
     "@testing-library/react": "^11.1.2",
     "@testing-library/user-event": "^12.2.2",
+    "moment": "^2.29.1",
     "nivo": "^0.31.0",
     "react": "^17.0.1",
     "react-datepicker": "^3.8.0",
