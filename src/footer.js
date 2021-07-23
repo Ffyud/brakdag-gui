@@ -1,4 +1,10 @@
 import React, { Component } from 'react';
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link
+} from 'react-router-dom';
 
 class Footer extends Component {
   constructor(props) {
@@ -15,8 +21,19 @@ class Footer extends Component {
   render() {
       return (
         <div id="footer">
-            <div className="logo">BRAKDAG</div>
+            <div className="logo"><Link to="/">BRAKDAG</Link></div>
             <div className="logo-tag">Verzamelt nieuws uit de stad Groningen en maakt het inzichtelijk.</div>
+            <div className="sitemap">
+              <ul className="sitemap-links">
+                <li><Link to="/bronnen">Bronnen</Link></li>
+                <li><Link to="/datum">Datum</Link></li>
+                <li><Link to="/zoeken">Zoeken</Link></li>
+              </ul>
+              <ul className="sitemap-rechts">
+              <li><a target="_blank" rel="noreferrer" href="https://stadjers-quiz.nl">Stadjers Quiz</a></li>
+              {/* <li>RSS</li> */}
+              </ul>
+            </div>
         </div>
       );
    }
