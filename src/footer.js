@@ -20,7 +20,7 @@ class Footer extends Component {
 
   render() {
       return (
-        <div id="footer">
+        <footer id="footer">
             <div className="logo"><Link to="/">BRAKDAG</Link></div>
             <div className="logo-tag">Verzamelt nieuws uit de stad Groningen en maakt het inzichtelijk.</div>
             <div className="sitemap">
@@ -34,7 +34,7 @@ class Footer extends Component {
               {/* <li>RSS</li> */}
               </ul>
             </div>
-        </div>
+        </footer>
       );
    }
 }

@@ -104,9 +104,9 @@ class ItemsPagina extends Component {
                       <a className='title-ref' target="blank" href={item['link']}>
                         {item['title']}
                       </a>
-                      <div className='description'>
+                      <summary className='description'>
                         <span>{item['description']}</span>
-                      </div>
+                      </summary>
                     </li>
                   </ul>
                 </li>

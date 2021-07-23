@@ -32,7 +32,7 @@ class BrakdagMenu extends Component{
         const zoekResultaten = this.state.zoekResultaten;
         return (
             <Router>
-                <div id="header">
+                <nav id="header">
                     <ul className="header-lijst">
                         <li id="header-logo">
                             <Link to="/">
@@ -56,7 +56,7 @@ class BrakdagMenu extends Component{
                             </Link>
                         </li>
                     </ul>
-                </div>
+                </nav>
                 <Switch>
                     <Route exact path="/bron/:bronId" component={BronPagina} />
                     <Route exact path="/item/:itemId" component={ItemsPagina} />
