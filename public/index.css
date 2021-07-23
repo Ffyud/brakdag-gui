@@ -48,8 +48,10 @@ a {
   position: -webkit-sticky;
   background: #EEE;
   text-align: left;
-  padding: 10px 0px 10px 10px;
-  color: #626262;
+  line-height: 40px;
+  padding: 5px 0px 5px 10px;
+  height: 40px;
+  color: #444;
   text-shadow: 0px 1px #FFFFFF82;
   font-weight: 500;
   user-select: none;
@@ -57,17 +59,23 @@ a {
   font-size: 1.1em;
   max-width: 690px;
   margin: 0px auto;
-  z-index: 900;
+  z-index: 800;
 }
 
-.pagina-header-date-pick input[type=date] {
+.pagina-header-date-pick input[type=text] {
   border: none;
-  background: none;
+  width: 250px;
+  background: #e1e1e1;
+  border-radius: 8px;
   font-family: inherit;
   font-size: inherit;
   color: inherit;
   cursor: pointer;
-  padding: 0px;
+  padding: 5px 5px 5px 10px;
+}
+
+.pagina-header-date-pick input[type=text]:hover {
+  background: #FFF;
 }
 
 #footer {
@@ -398,7 +406,7 @@ ul.lijst-flex li div.flex-item .title a:hover {
 ul.lijst {
   list-style-type: none;
   margin: 0px;
-  padding: 0px 10px 0px 10px;
+  padding: 0px 10px 10px 10px;
 }
 ul.lijst-item {
   list-style-type: none;
@@ -485,9 +493,6 @@ ul.lijst-item li.bron span {
   margin-bottom: 10px;
   animation: fadeIn 1s;
   animation: pulse 2800ms ease-in-out infinite;
-}
-.lijst-item-placeholder:first-child {
-  margin-top: 44px;
 }
 
 .lijst-item-placeholder-small {
