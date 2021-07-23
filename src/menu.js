@@ -13,6 +13,7 @@ import BronPagina from './bron-pagina.js';
 import ItemsPagina from './items-pagina.js';
 import BronOverzichtPagina from './bron-overzicht-pagina.js';
 import Footer from './footer.js';
+import ScrollToTop from './scroll-top.js';
 
 class BrakdagMenu extends Component{
     constructor(props) {
@@ -32,6 +33,7 @@ class BrakdagMenu extends Component{
         const zoekResultaten = this.state.zoekResultaten;
         return (
             <Router>
+                <ScrollToTop/>
                 <nav id="header">
                     <ul className="header-lijst">
                         <li id="header-logo">
