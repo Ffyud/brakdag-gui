@@ -80,7 +80,7 @@ class HomePagina extends Component {
     if (error) {
       return <div><ServerFoutPlaceholder message={error.message} /></div>;
     } else if (!isLoaded) {
-      return <div><ItemsLijstPlaceholder /></div>;
+      return <div><header className="pagina-header"></header><ItemsLijstPlaceholder /></div>;
     } else {
       if(resultatenUitgelicht.length !== 0) {
         return (

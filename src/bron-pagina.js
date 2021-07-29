@@ -41,7 +41,7 @@ class BronPagina extends Component {
   render() {
     const { error, isLoaded, resultaten } = this.state;
     if (error || !isLoaded || resultaten.length === 0) {
-      return <div><ItemLijstPlaceholder /></div>;
+      return <div><header className="pagina-header"></header><ItemLijstPlaceholder /></div>;
     } else {
       return (
         <div>

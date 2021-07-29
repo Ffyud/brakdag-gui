@@ -84,7 +84,7 @@ class ItemsPagina extends Component {
 
     const { error, isLoaded, resultaatItem, resultatenVergelijking } = this.state;
     if (error || !isLoaded || resultaatItem.length === 0) {
-      return <div><ItemLijstPlaceholder /></div>;
+      return <div><header className="pagina-header"></header><ItemLijstPlaceholder /></div>;
     } else {
       return (
         <div>
