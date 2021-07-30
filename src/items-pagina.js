@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import ItemsLijst from './items-lijst';
 import ItemLijstPlaceholder from './placeholder/items-lijst-placeholder.js';
+import moment from 'moment';
 import {
   BrowserRouter as Router,
   Switch,
@@ -82,13 +83,18 @@ class ItemsPagina extends Component {
       return <span>{formattedTime}</span>
     }
 
+    function NetteTijdVolledig(props) {
+      var formattedTime = moment.unix(props).format("DD-MM-YYYY");
+      return <span>{formattedTime}</span>
+    }
+
     const { error, isLoaded, resultaatItem, resultatenVergelijking } = this.state;
     if (error || !isLoaded || resultaatItem.length === 0) {
       return <div><header className="pagina-header"></header><ItemLijstPlaceholder /></div>;
     } else {
       return (
         <div>
-          <div className="pagina-header">Artikel</div>
+          <div className="pagina-header">Artikel <span className="pagina-header-sub">{NetteTijdVolledig(resultaatItem[0]['timestamp_publicatie'])}</span></div>
           <div id='wrap'>
             <ul className='lijst'>
               {resultaatItem.map(item => (
