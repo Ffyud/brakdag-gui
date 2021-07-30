@@ -94,7 +94,7 @@ class ItemsPagina extends Component {
     } else {
       return (
         <div>
-          <div className="pagina-header">Artikel <span className="pagina-header-sub">{NetteTijdVolledig(resultaatItem[0]['timestamp_publicatie'])}</span></div>
+          <div className="pagina-header">Artikel <span className="pagina-header-sub">gepubliceerd op {NetteTijdVolledig(resultaatItem[0]['timestamp_publicatie'])}</span></div>
           <div id='wrap'>
             <ul className='lijst'>
               {resultaatItem.map(item => (
