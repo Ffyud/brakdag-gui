@@ -22,11 +22,31 @@ class DatumPagina extends Component {
         };
     }
 
+    componentDidMount() {
+      if(this.props.match !== undefined) {
+        var dateUrl = this.props.match.params.datumId;
+
+        if(moment(dateUrl, 'YYYY-MM-DD').isValid()) {
+          var dateMomentObject = moment(dateUrl, "DD-MM-YYYY");
+          var fullDateObject = dateMomentObject.toDate();
+          this.handleDateChange(fullDateObject);
+        }
+        else
+        {
+          // ongeldige datum
+        }
+
+      }
+      else
+      {
+        // geen prop meegegeven in de url
+      }
+    }
+
     handleDateChange = (date) => {
       var dateFormatted = moment(date).format('DD-MM-YYYY')
       this.setState({date: dateFormatted, startDate: date});
-      console.log("de datepicker heeft een date " + dateFormatted);
-  
+
       fetch(process.env.REACT_APP_BRAKDAGFLASK+"/items/datum/" + dateFormatted)
       .then(res => res.json())
       .then(
@@ -35,8 +55,6 @@ class DatumPagina extends Component {
             isLoaded: true,
             resultaten: result
           });
-          // this.props.dateOpdracht(result);
-          console.log(" resultaten!" + result.length)
         },
         (error) => {
           this.setState({
@@ -48,6 +66,7 @@ class DatumPagina extends Component {
     };
 
     render() {
+
       if(this.state.resultaten.length ===  0) {
             return <div>
                   <div className="pagina-header-date-pick">
@@ -59,7 +78,7 @@ class DatumPagina extends Component {
                     placeholderText="Kies een datum" 
                     selected={this.state.startDate} 
                     locale="nl" 
-                    dateFormat="EEEE dd MMMM yyyy" 
+                    dateFormat="EEEE d MMMM yyyy" 
                     onChange={this.handleDateChange} />
                   </div>
               <ItemsLijstPlaceholder />
@@ -78,7 +97,7 @@ class DatumPagina extends Component {
                     placeholderText="Kies een datum" 
                     selected={this.state.startDate} 
                     locale="nl" 
-                    dateFormat="EEEE dd MMMM yyyy" 
+                    dateFormat="EEEE d MMMM yyyy" 
                     onChange={this.handleDateChange} />
                   </div>
                   <ItemsLijst items={this.state.resultaten} />

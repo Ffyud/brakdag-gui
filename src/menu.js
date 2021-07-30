@@ -62,6 +62,7 @@ class BrakdagMenu extends Component{
                 <Switch>
                     <Route exact path="/bron/:bronId" component={BronPagina} />
                     <Route exact path="/item/:itemId" component={ItemsPagina} />
+                    <Route exact path="/datum/:datumId" component={DatumPagina} />
                     <Route exact path="/">
                         <Thuis/>
                     </Route>    
