@@ -234,6 +234,7 @@ ul.header-lijst li #logo-small:hover {
 
   ul.lijst-flex {
     display: inline-block;
+    width: calc(100% - 20px);
   }
 
   ul.lijst-flex li {
