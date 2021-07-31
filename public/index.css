@@ -294,7 +294,6 @@ ul.header-lijst li #info:hover, #bron-info:hover, #datum-info:hover {
 
 .wrap-overflow {
   overflow-x: scroll;
-  max-width: 680px !important;
 }
 
 /* Compacte lijst met items naar elkaar */
@@ -302,7 +301,7 @@ ul.lijst-flex {
   list-style-type: none;
   margin: 0px;
   display: flex;
-  padding: 0px 10px 0px 0px;
+  padding: 0px 10px 0px 10px;
 }
 
 ul.lijst-flex li {
@@ -318,7 +317,7 @@ ul.lijst-flex li:first-child {
 }
 
 ul.lijst-flex li:last-child {
-  padding: 0px 0px 0px 5px;
+  padding: 0px 10px 0px 5px;
 }
 
 ul.lijst-flex li div.flex-item {
