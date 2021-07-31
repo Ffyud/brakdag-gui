@@ -55,7 +55,9 @@ class ItemsLijst extends Component {
                     </a>
                     <Link to={"/item/" + item['id']}>
                       <summary className='description'>
+                        {item['description'] !==  null &&
                           <MooieDescription description={item['description']} />
+                        }
                       </summary>
                       </Link>
                   </li>
