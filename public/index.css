@@ -233,23 +233,13 @@ ul.header-lijst li #logo-small:hover {
   }
 
   ul.lijst-flex {
-    display: inline-block;
-    width: calc(100% - 20px);
+    padding: 0px 10px 0px 10px !important;
   }
 
-  ul.lijst-flex li {
-    min-width: auto !important;
-    min-height: auto !important;
-    display: table-row !important;
+  ul.lijst-flex li:last-child{
+    padding: 0px 10px 0px 5px !important;
   }
 
-  ul.lijst-flex li div.flex-item {
-    margin: 0px 0px 10px 0px !important;
-    min-height: auto !important;
-  }
-  ul.lijst-flex li.lijst-next div{
-    line-height: 30px !important;
-  }
 }
 
 ul.header-lijst li #zoeken {
@@ -302,21 +292,25 @@ ul.header-lijst li #info:hover, #bron-info:hover, #datum-info:hover {
   user-select: none;
 }
 
+.wrap-overflow {
+  overflow-x: scroll;
+  max-width: 680px !important;
+}
+
 /* Compacte lijst met items naar elkaar */
 ul.lijst-flex {
   list-style-type: none;
   margin: 0px;
-  display: table;
-  padding: 0px 10px 0px 10px;
+  display: flex;
+  padding: 0px 10px 0px 0px;
 }
 
 ul.lijst-flex li {
-  display: table-cell;
+  display: flex;
   position: relative;
-  min-width: 115px;
-  min-height: 160px;
+  min-width: 220px;
   padding: 0px 5px 0px 5px;
-  margin: 0px 0px 0px 0px;
+  margin: 0px 0px 5px 0px;
 }
 
 ul.lijst-flex li:first-child {
@@ -333,7 +327,6 @@ ul.lijst-flex li div.flex-item {
   padding: 10px;
   background: #FFF;
   overflow: auto;
-  min-height: 140px;
   animation: blip 500ms;
 }
 
@@ -341,39 +334,6 @@ ul.lijst-flex li div.flex-item {
   0% { transform: scale(1);}
   50% { transform: scale(1.005)}
   100% { transform: scale(1);}
-}
-
-ul.lijst-flex li.lijst-next {
-  vertical-align: top;
-  min-width: auto;
-  padding: 0px 0px 0px 5px;
-  text-align: center;
-
-}
-ul.lijst-flex li.lijst-next div {
-  cursor: pointer;
-  background: #b2b49d6e;
-  font-size: 1.2em;
-  color: #666;
-  border-radius: 8px;
-  line-height: 160px;
-  width: 30px;
-  animation: margin-reverse 200ms;
-}
-ul.lijst-flex li.lijst-next div:hover {
-  background: #FFF;
-  color: #000;
-  margin-left: 2px;
-  animation: margin 200ms;
-}
-@keyframes margin {
-  0% { margin-left: 0px;}
-  100% { margin-left: 2px;}
-}
-
-@keyframes margin-reverse {
-  0% { margin-left: 2px;}
-  100% { margin-left: 0px;}
 }
 
 ul.lijst-flex li div.flex-item .bron img {
