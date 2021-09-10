@@ -85,7 +85,7 @@ class HomePagina extends Component {
       if(resultatenUitgelicht.length !== 0) {
         return (
         <div>
-          <header className="pagina-header">Uitgelicht</header>
+          <header className="pagina-header header-unstick">Uitgelicht</header>
           <ItemsUitgelichtLijst items={resultatenUitgelicht} />
           <header className="pagina-header">
             {this.state.todayDate}
