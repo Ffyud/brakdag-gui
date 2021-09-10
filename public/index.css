@@ -330,14 +330,10 @@ ul.lijst-flex li div.flex-item {
   padding: 10px;
   background: #FFF;
   overflow: auto;
-  animation: blip 500ms;
+  animation: fadeIn 700ms ease-in;
 }
 
-@keyframes blip {
-  0% { transform: scale(1);}
-  50% { transform: scale(1.005)}
-  100% { transform: scale(1);}
-}
+
 
 ul.lijst-flex li div.flex-item .bron img {
   width: 25px;
@@ -380,7 +376,7 @@ ul.lijst-item {
   border-radius: 8px;
   background: #FFF;
   margin: 0px 0px 10px 0px;
-  animation: fadeIn 500ms;
+  animation: fadeIn 700ms ease-in;
 }
 
 ul.lijst-item li { 
@@ -574,6 +570,7 @@ ul.lijst-item li.bron span {
   0% {opacity: 0; bottom: -25px; transform: scale(.9);}
   100% { opacity: 1;bottom: 0px; transform: scale(1);}
 }
+
 @keyframes fadeInImg {
   0% {opacity: 0}
   100% {opacity: 1}
@@ -596,3 +593,8 @@ ul.lijst-item li.bron span {
   100% {opacity: 1}
 }
 
+@keyframes blip {
+  0% { transform: scale(1);}
+  50% { transform: scale(1.005)}
+  100% { transform: scale(1);}
+}
