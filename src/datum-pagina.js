@@ -79,6 +79,7 @@ class DatumPagina extends Component {
                     selected={this.state.startDate} 
                     locale="nl" 
                     dateFormat="EEEE d MMMM yyyy" 
+                    onFocus={e => e.target.blur()}
                     onChange={this.handleDateChange} />
                   </div>
               <ItemsLijstPlaceholder />
