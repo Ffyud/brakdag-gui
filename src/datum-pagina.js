@@ -71,15 +71,16 @@ class DatumPagina extends Component {
             return <div>
                   <div className="pagina-header-date-pick">
                     <DatePicker 
-                    peekNextMonth
-                    showMonthDropdown
-                    dropdownMode="select"
+                    peekNextMonth 
+                    showMonthDropdown 
+                    dropdownMode="select" 
                     minDate={new Date("01-04-2016")} 
                     placeholderText="Kies een datum" 
                     selected={this.state.startDate} 
                     locale="nl" 
                     dateFormat="EEEE d MMMM yyyy" 
-                    onFocus={e => e.target.blur()}
+                    disabledKeyboardNavigation 
+                    onFocus={e => e.target.blur()} 
                     onChange={this.handleDateChange} />
                   </div>
               <ItemsLijstPlaceholder />
