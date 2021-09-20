@@ -114,26 +114,17 @@ a {
   max-width: 300px;
   margin: 0px auto;
 }
-#footer .sitemap ul.sitemap-links {
-  float: left;
+#footer .sitemap ul.sitemap {
+  display: table;
   list-style-type: none;
-  width: 50%;
-  margin: 0px;
-  padding: 0px;
-}
-
-#footer .sitemap ul.sitemap-rechts {
-  float: right;
-  list-style-type: none;
-  width: 50%;
-  margin: 0px;
+  margin: 0px auto;
   padding: 0px;
 }
 
 #footer .sitemap li {
-  padding: 0px 0px 10px 0px;
+  display: table-cell;
+  padding: 0px 5px 10px 0px;
 }
-
 
 #header {
   background: #4F6C51;

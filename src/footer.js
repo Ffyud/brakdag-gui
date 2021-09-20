@@ -24,14 +24,12 @@ class Footer extends Component {
             <div className="logo"><Link to="/">BRAKDAG</Link></div>
             <div className="logo-tag">Verzamelt nieuws uit de stad Groningen en maakt het inzichtelijk.</div>
             <div className="sitemap">
-              <ul className="sitemap-links">
+              <ul className="sitemap">
                 <li><Link to="/bronnen">Bronnen</Link></li>
+                <li>&#183;</li>
                 <li><Link to="/datum">Datum</Link></li>
+                <li>&#183;</li>
                 <li><Link to="/zoeken">Zoeken</Link></li>
-              </ul>
-              <ul className="sitemap-rechts">
-              <li><a target="_blank" rel="noreferrer" href="https://stadjers-quiz.nl">Stadjers Quiz</a></li>
-              {/* <li>RSS</li> */}
               </ul>
             </div>
         </footer>
