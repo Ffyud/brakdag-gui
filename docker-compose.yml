@@ -5,3 +5,23 @@ services:
     build: .
     ports:
       - '1337:81'
+  swag:
+    cap_add:
+      - NET_ADMIN
+    container_name: swag
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - TZ=Europe/London
+      - URL=brakdag.nl
+      - SUBDOMAINS=www
+      - VALIDATION=http
+    image: 'ghcr.io/linuxserver/swag'
+    ports:
+      - '443:443'
+      - '80:80'
+    restart: unless-stopped
+    depends_on:
+      - brakdag-react
+    volumes:
+      - '${PWD}/swag:/config'
