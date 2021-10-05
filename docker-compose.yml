@@ -4,7 +4,7 @@ services:
     container_name: brakdag-react
     build: .
     ports:
-      - '1337:81'
+      - '1337:5000'
   swag:
     cap_add:
       - NET_ADMIN
