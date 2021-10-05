@@ -8,6 +8,7 @@ RUN npm install react-scripts@3.4.1 -g --silent
 COPY . ./
 RUN npm run build
 RUN npm install serve
-RUN npx serve -s build
 
 EXPOSE 5000
+
+CMD ["npx", "serve", "-s", "build"] 
