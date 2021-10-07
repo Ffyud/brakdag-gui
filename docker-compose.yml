@@ -5,10 +5,14 @@ services:
     build: .
     ports:
       - '1337:5000'
+    networks:
+      - brakdag-network
   swag:
     cap_add:
       - NET_ADMIN
     container_name: swag
+    networks:
+      - brakdag-network
     environment:
       - PUID=1000
       - PGID=1000
@@ -25,3 +29,6 @@ services:
       - brakdag-react
     volumes:
       - '${PWD}/swag:/config'
+networks:
+  brakdag-network:
+    driver: bridge      
