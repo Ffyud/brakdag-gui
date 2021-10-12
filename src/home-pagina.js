@@ -22,7 +22,7 @@ class HomePagina extends Component {
   componentDidMount() {
     var today = new Date();
     const monthNames = ["januari", "februari", "maart", "april", "mei", "juni",
-  "juli", "augustus", "september", "october", "november", "december"];
+  "juli", "augustus", "september", "oktober", "november", "december"];
 
     const dayNames = ["Zondag", "Maandag", "Dinsdag", "Woensdag", "Donderdag", "Vrijdag", "Zaterdag"]
 
