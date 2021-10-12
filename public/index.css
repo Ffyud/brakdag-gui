@@ -387,6 +387,7 @@ ul.lijst-item li.title a.title-ref {
   font-size: 1.1em;
   text-decoration: none;
   color: #000;
+  word-wrap: anywhere;
 }
 
 ul.lijst-item li.title a.title-ref:hover {
