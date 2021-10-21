@@ -22,7 +22,7 @@ class Footer extends Component {
       return (
         <footer id="footer">
             <div className="logo"><Link to="/">BRAKDAG</Link></div>
-            <div className="logo-tag">Verzamelt nieuws uit de stad Groningen en maakt het inzichtelijk.</div>
+            <div className="logo-tag">De verzamelplek voor nieuws uit de stad Groningen.</div>
             <div className="sitemap">
               <ul className="sitemap">
                 <li><Link to="/bronnen">Bronnen</Link></li>
