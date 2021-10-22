@@ -73,6 +73,19 @@ class ItemsPagina extends Component {
     this.restCall(this.state.itemId)
   }
 
+  selectAndCopyItemLink() {
+    var copyElement = document.getElementById("copy-text");
+    var vinkje = document.createElement("i");
+    vinkje.classList.add("ri-check-line");    
+    vinkje.classList.add("confirm-vinkje");
+    copyElement.appendChild(vinkje);
+
+    var linkElement = document.getElementById("item-link");
+    linkElement.select();
+    linkElement.setSelectionRange(0, 99999);
+    navigator.clipboard.writeText(linkElement.value);
+  }
+
   render() {
 
     function NetteTijd(props) {
@@ -82,6 +95,8 @@ class ItemsPagina extends Component {
       var formattedTime = hours + ':' + minutes.substr(-2);
       return <span>{formattedTime}</span>
     }
+
+
 
     function NetteTijdVolledig(props) {
       var formattedTime = moment.unix(props).format("DD-MM-YYYY");
@@ -118,6 +133,11 @@ class ItemsPagina extends Component {
                 </li>
               ))}
             </ul>
+          </div>
+          <div id="wrap">
+            <div className="item-action">
+              <input id="item-link" type="text" value={"https://brakdag.nl/item/" + this.state.itemId} /><span onClick={this.selectAndCopyItemLink} id="copy-text">link kopieren</span>
+            </div>
           </div>
           {resultatenVergelijking.length > 0 &&
           <div>
