@@ -54,8 +54,8 @@ class BronOverzichtPagina extends Component {
       return (
         <div>
           <header className="pagina-header">
-            Nieuwsbronnen
-            <span className="pagina-header-sub">{resultaten.length} bronnen</span>
+            Bronnen
+            <span className="pagina-header-sub">{resultaten.length} nieuwsbronnen</span>
           </header>
           <div id='wrap'>
             <ul className='lijst'>
