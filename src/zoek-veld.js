@@ -93,7 +93,7 @@ class ZoekVeld extends Component {
             });
         }
         
-        return <div><input placeholder='ZOEKEN' style={{ color: this.state.fontColor,backgroundColor: this.state.backgroundColor}} id='zoeken' type='text' onChange={handleInput} onKeyDown={handleKeyDown} onBlur={doeRustig} onFocus={doeActief}/></div>;
+        return <div><input placeholder='Zoek naar nieuws' style={{ color: this.state.fontColor,backgroundColor: this.state.backgroundColor}} id='zoeken' type='text' onChange={handleInput} onKeyDown={handleKeyDown} onBlur={doeRustig} onFocus={doeActief}/></div>;
     }
 }
 export default ZoekVeld;  
