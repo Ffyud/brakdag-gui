@@ -79,8 +79,8 @@ class ZoekVeld extends Component {
             if(this.state.updateInput !== '')
             {
                 this.setState({
-                    backgroundColor: "rgba(255, 255, 255, 0.5)",
-                    fontColor: "rgba(0, 0, 0, 0.5)"
+                    backgroundColor: "var(--white-transparent)",
+                    fontColor: "var(--head-green)"
                 });
             }
         }
@@ -88,8 +88,8 @@ class ZoekVeld extends Component {
         const doeActief = (event) => {
             event.target.select();
             this.setState({
-                backgroundColor: "rgb(252, 251, 238)",
-                fontColor: "#000"
+                backgroundColor: "var(--floral-white)",
+                fontColor: "var(--black)"
             });
         }
         
