@@ -442,6 +442,7 @@ ul.lijst-item li.bron span {
 }
 .item-action input[type=text] {
   background: #e1e1e1;
+  font-size: 1em;
   outline: none;
   color: #444;
   padding: 0px 10px 0px 10px;
@@ -470,7 +471,7 @@ ul.lijst-item li.bron span {
 }
 
 .confirm-vinkje {
-  animation: inOut 1500ms ease-out;
+  animation: inOut 1000ms ease-out;
   opacity: 0;
   position: absolute;
   font-size: 2.5em;
@@ -482,8 +483,6 @@ ul.lijst-item li.bron span {
   50% { opacity: 1; padding: 0px 0px 0px 5px;}
   100% { opacity: 0; padding: 0px 0px 0px 5px;}
 }
-
-
 
 .lijst-item-placeholder {
   position: relative;
