@@ -1,19 +1,38 @@
-:root {
-  --head-green: #4F6C51;
-  --floral-white: #FDFBEF;
-  --descriptive-light: #6B6C5B;
-  --white: #FFF;
-  --white-transparent: rgba(255, 255, 255, 0.5);
-  --black: #000;
+  :root {
+    --head-green: #4F6C51;
+    --floral-white: #FDFBEF;
+    --descriptive-light: #6B6C5B;
+    --white: #FFF;
+    --white-transparent: rgba(255, 255, 255, 0.5);
+    --black: #000;
+    
+    --main-placeholder-element: #e4e4e4;
+    --main-bg: #EEE;
+    --main-bg-dark: #7777771C;
+    --main-bg-font-dark: #444;
+    --main-bg-font-dark-text-shade:#FFFFFF82;
+    --main-bg-font: #666565;
+    --main-shade: #DFDFDF;
+  }
+
+/* dark vibe */
+/* :root {
+  --head-green: #000;
+  --floral-white: #e3e3e3;
+  --descriptive-light: #868776;
+  --white: rgb(0, 0, 0);
+  --white-transparent: rgba(0, 0, 0, 0.5);
+  --black: rgb(172, 172, 172);
   
-  --main-placeholder-element: #e4e4e4;
-  --main-bg: #EEE;
-  --main-bg-dark: #7777771C;
-  --main-bg-font-dark: #444;
+  --main-placeholder-element: #292929;
+  --main-bg: rgb(29, 29, 29);
+  --main-bg-dark: #3434341c;
+  --main-bg-font-dark: rgb(171, 171, 171);
   --main-bg-font-dark-text-shade:#FFFFFF82;
-  --main-bg-font: #666565;
-  --main-shade: #B0B0B0;
-}
+  --main-bg-font: #e4e4e4;
+  --main-shade: #4b4b4b;
+} */
+
 
 html {
   overflow-y: scroll;
@@ -333,15 +352,13 @@ ul.lijst-flex li:last-child {
 }
 
 ul.lijst-flex li div.flex-item {
-  box-shadow: 0px 1px 2px -1px var(--main-shade);
+  box-shadow: inset 0px 0px 0px 1px var(--main-shade);
   border-radius: 8px;
   padding: 10px;
   background: var(--white);
   overflow: auto;
   animation: fadeIn 700ms ease-in;
 }
-
-
 
 ul.lijst-flex li div.flex-item .bron img {
   width: 25px;
@@ -380,7 +397,7 @@ ul.lijst-item {
   list-style-type: none;
   position: relative;
   padding: 0px;
-  box-shadow: 0px 1px 2px -1px var(--main-shade);
+  box-shadow: inset 0px 0px 0px 1px #DFDFDF;
   border-radius: 8px;
   background: var(--white);
   margin: 0px 0px 10px 0px;
