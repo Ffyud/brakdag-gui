@@ -18,13 +18,13 @@ class ZoekPagina extends Component {
         const { onZoekOpdracht } = this.props;
         if(onZoekOpdracht === undefined) {
             return <div>
-                <header className="pagina-header"></header>
+                <header className="pagina-header">Zoeken</header>
                 <ItemsLijstPlaceholder /><NietGezochtPlaceholder />
                 </div>;
         }
         else if(onZoekOpdracht.length ===  0) {
             return <div>
-                <header className="pagina-header"></header>
+                <header className="pagina-header">Zoeken</header>
                 <ItemsLijstPlaceholder /><NiksGevondenPlaceholder />
                 </div>;
         }
