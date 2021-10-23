@@ -97,7 +97,10 @@ class HomePagina extends Component {
       else {
       return (
         <div>
-          <header className="pagina-header">{this.state.todayDate}</header>
+          <header className="pagina-header">
+            {this.state.todayDate}
+            <span className="pagina-header-sub">{resultaten.length} artikelen</span>
+          </header>
           <ItemsLijst items={resultaten} />
         </div>
       );
