@@ -360,10 +360,6 @@ ul.lijst-flex li div.flex-item {
   animation: fadeIn 700ms ease-in;
 }
 
-ul.lijst-flex li div.flex-item:hover {
-  box-shadow: inset 0px 0px 0px 1px var(--head-green);
-}
-
 ul.lijst-flex li div.flex-item .bron img {
   width: 25px;
   height: 25px;
@@ -406,10 +402,6 @@ ul.lijst-item {
   background: var(--white);
   margin: 0px 0px 10px 0px;
   animation: fadeIn 700ms ease-in;
-}
-
-ul.lijst-item:hover {
-  box-shadow: inset 0px 0px 0px 1px var(--head-green);
 }
 
 ul.lijst-item li { 
