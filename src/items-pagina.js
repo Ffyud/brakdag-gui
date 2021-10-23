@@ -76,14 +76,19 @@ class ItemsPagina extends Component {
   selectAndCopyItemLink() {
     var copyElement = document.getElementById("copy-text");
     var vinkje = document.createElement("i");
+
     vinkje.classList.add("ri-check-line");    
     vinkje.classList.add("confirm-vinkje");
     copyElement.appendChild(vinkje);
 
     var linkElement = document.getElementById("item-link");
+    navigator.clipboard.writeText(linkElement.value);
+  }
+
+  selectAll() {
+    var linkElement = document.getElementById("item-link");
     linkElement.select();
     linkElement.setSelectionRange(0, 99999);
-    navigator.clipboard.writeText(linkElement.value);
   }
 
   render() {
@@ -136,7 +141,7 @@ class ItemsPagina extends Component {
           </div>
           <div id="wrap">
             <div className="item-action">
-              <input id="item-link" type="text" value={"https://brakdag.nl/item/" + this.state.itemId} /><span onClick={this.selectAndCopyItemLink} id="copy-text">link kopieren</span>
+              <input id="item-link" type="text" value={"https://brakdag.nl/item/" + this.state.itemId} onFocus={this.selectAll} /><span onClick={this.selectAndCopyItemLink} id="copy-text">link kopieren</span>
             </div>
           </div>
           {resultatenVergelijking.length > 0 &&
