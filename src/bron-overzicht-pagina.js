@@ -17,6 +17,9 @@ class BronOverzichtPagina extends Component {
       isLoaded: false,
       resultaten: []
     };
+
+    document.title = "Bronnen - Brakdag";
+
   }
 
   componentDidMount() {

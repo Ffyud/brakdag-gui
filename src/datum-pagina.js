@@ -20,6 +20,9 @@ class DatumPagina extends Component {
           resultaten: [],
           startDate: new Date()
         };
+
+        document.title = "Datum - Brakdag";
+
     }
 
     componentDidMount() {

@@ -17,6 +17,9 @@ class HomePagina extends Component {
       resultatenAantal: 0,
       aKey: false
     };
+
+    document.title = "Brakdag";
+
   }
 
   componentDidMount() {

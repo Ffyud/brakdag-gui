@@ -19,6 +19,9 @@ class ItemsPagina extends Component {
       resultatenVergelijking: [],
       resultaatItem: []
     };
+
+    document.title = "Artikel - Brakdag";
+
   }
 
   componentDidUpdate() {

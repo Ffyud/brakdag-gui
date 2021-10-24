@@ -12,6 +12,8 @@ class ZoekPagina extends Component {
           error: null,
           isLoaded: false,
         };
+
+        document.title = "Zoeken - Brakdag";
     }
 
     render() {
