@@ -1,22 +1,4 @@
-:root {
-    --head-green: #4F6C51;
-    --floral-white: #FDFBEF;
-    --header-placeholder: #444;
-    --item-description: #6B6C5B;
-    --item-box-shadow: #DFDFDF;
-    --white: #FFF;
-    --white-transparent: rgba(255, 255, 255, 0.5);
-    --black: #000;
-    --main-bg: #EEE;
-    --main-bg-font: #666565;
-    --main-bg-darker: #7777771C;
-    --main-bg-darker-font: #444;
-    --main-placeholder-bg: #e4e4e4;
-    --main-placeholder-bg2: #dedede;
-    --image-filter: none;
-  }
-
-.theme-white {
+.theme-light {
     --head-green: #4F6C51;
     --floral-white: #FDFBEF;
     --header-placeholder: #444;
@@ -42,7 +24,7 @@
   --item-box-shadow: #000;
   --white: #1C1C1C;
   --white-transparent: rgba(255, 255, 255, 0.5);
-  --black: #ddd;
+  --black: #f4f4f4;
   --main-bg: #2D2D2D;
   --main-bg-font: #979797;
   --main-bg-darker: #1C1C1C;
@@ -555,6 +537,8 @@ ul.lijst-item li.bron span {
   margin: 15px;
   text-shadow: none;
 }
+
+#theme-setting .active { background: var(--white); font-weight: 800;}
 
 #theme-setting .theme-option {
   color: var(--main-bg-font);
