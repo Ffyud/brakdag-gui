@@ -259,10 +259,10 @@ ul.header-lijst li #logo-small {
 }
 
 ul.header-lijst li #logo:hover {
-  color:var(--white);
+  color:var(--floral-white);
 }
 ul.header-lijst li #logo-small:hover {
-  color:var(--white);
+  color:var(--floral-white);
 }
 
 @media only screen and (max-width: 600px) {
