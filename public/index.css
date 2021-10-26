@@ -1,37 +1,45 @@
-  :root {
+:root {
     --head-green: #4F6C51;
     --floral-white: #FDFBEF;
-    --descriptive-light: #6B6C5B;
+
+    --item-description: #6B6C5B;
+    --item-box-shadow: #DFDFDF;
+
     --white: #FFF;
     --white-transparent: rgba(255, 255, 255, 0.5);
     --black: #000;
     
-    --main-placeholder-element: #e4e4e4;
     --main-bg: #EEE;
-    --main-bg-dark: #7777771C;
-    --main-bg-font-dark: #444;
-    --main-bg-font-dark-text-shade:#FFFFFF82;
     --main-bg-font: #666565;
-    --main-shade: #DFDFDF;
+
+    --main-bg-darker: #7777771C;
+    --main-bg-darker-font: #444;
+
+    --main-placeholder-bg: #e4e4e4;
+    --main-placeholder-bg2: #dedede;
   }
 
 /* dark vibe */
-/* :root {
-  --head-green: #000;
-  --floral-white: #e3e3e3;
-  --descriptive-light: #868776;
-  --white: rgb(0, 0, 0);
-  --white-transparent: rgba(0, 0, 0, 0.5);
-  --black: rgb(172, 172, 172);
+.theme-dark {
+  --head-green: #4F6C51;
+  --floral-white: #FDFBEF;
+
+  --item-description: #6B6C5B;
+  --item-box-shadow: #DFDFDF;
+
+  --white: #FFF;
+  --white-transparent: rgba(255, 255, 255, 0.5);
+  --black: #000;
   
-  --main-placeholder-element: #292929;
-  --main-bg: rgb(29, 29, 29);
-  --main-bg-dark: #3434341c;
-  --main-bg-font-dark: rgb(171, 171, 171);
-  --main-bg-font-dark-text-shade:#FFFFFF82;
-  --main-bg-font: #e4e4e4;
-  --main-shade: #4b4b4b;
-} */
+  --main-bg: #EEE;
+  --main-bg-font: #666565;
+
+  --main-bg-darker: #7777771C;
+  --main-bg-darker-font: #444;
+
+  --main-placeholder-bg: #e4e4e4;
+  --main-placeholder-bg2: #dedede;
+}
 
 
 html {
@@ -46,6 +54,9 @@ html, body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+#root {
   background: var(--main-bg);
 }
 
@@ -62,7 +73,7 @@ a {
   padding: 0px 10px 0px 10px;
   height: 50px;
   line-height: 50px;
-  color: var(--main-bg-font-dark);
+  color: var(--main-bg-darker-font);
   font-weight: 500;
   user-select: none;
   animation: fadeIn 1s;
@@ -91,8 +102,7 @@ a {
   line-height: 40px;
   padding: 5px 0px 5px 10px;
   height: 40px;
-  color: var(--main-bg-font-dark);
-  text-shadow: 0px 1px var(--main-bg-font-dark-text-shade);
+  color: var(--main-bg-darker-font);
   font-weight: 500;
   user-select: none;
   animation: fadeIn 1s;
@@ -105,7 +115,7 @@ a {
 .pagina-header-date-pick input[type=text] {
   border: none;
   width: 250px;
-  background: var(--main-placeholder-element);
+  background: var(--main-placeholder-bg);
   border-radius: 8px;
   font-family: inherit;
   font-size: inherit;
@@ -122,22 +132,21 @@ a {
   bottom: 0px;
   user-select: none;
   position: relative;
-  color: var(--main-bg-font-dark);
-  text-shadow: 0px 1px var(--main-bg-font-dark-text-shade);
+  color: var(--main-bg-darker-font);
   text-align: center;
   padding: 100px 10px 100px 10px;
   animation: fadeInDelayed 3s;
-  background: var(--main-bg-dark);
+  background: var(--main-bg-darker);
   height: calc(100vh - 250px);
   margin-top: 50px;
 }
 
-#footer a { color :var(--main-bg-font-dark);}
+#footer a { color :var(--main-bg-darker-font);}
 #footer a:hover { text-decoration: underline;}
 #footer .logo a:hover { text-decoration: none; color: var(--black);}
 #footer .logo {
   font-family: Staatliches;
-  text-shadow: 0px 1px --var(whi);
+  text-shadow: 0px 1px --var(white);
   font-size: 2.345em;
 }
 #footer .logo-tag {
@@ -289,7 +298,7 @@ ul.header-lijst li #zoeken {
 ul.header-lijst li #zoeken::placeholder {
   font-size: .8em;
   font-weight: 600;
-  color: var(--main-bg-font-dark);
+  color: var(--main-bg-darker-font);
 }
 
 ul.header-lijst li #info, #bron-info, #datum-info {
@@ -352,7 +361,7 @@ ul.lijst-flex li:last-child {
 }
 
 ul.lijst-flex li div.flex-item {
-  box-shadow: inset 0px 0px 0px 1px var(--main-shade);
+  box-shadow: inset 0px 0px 0px 1px var(--item-box-shadow);
   border-radius: 8px;
   padding: 10px;
   background: var(--white);
@@ -397,7 +406,7 @@ ul.lijst-item {
   list-style-type: none;
   position: relative;
   padding: 0px;
-  box-shadow: inset 0px 0px 0px 1px var(--main-shade);
+  box-shadow: inset 0px 0px 0px 1px var(--item-box-shadow);
   border-radius: 8px;
   background: var(--white);
   margin: 0px 0px 10px 0px;
@@ -429,7 +438,7 @@ ul.lijst-item li.title a.title-ref:hover {
 }
 
 ul.lijst-item .description {
-  color: var(--descriptive-light);
+  color: var(--item-description);
   font-weight: 400;
   user-select: text;
   word-break: break-word;
@@ -437,7 +446,7 @@ ul.lijst-item .description {
 
 ul.lijst-item .description a {
   text-decoration: none;
-  color:var(--descriptive-light);
+  color:var(--item-description);
 }
 
 ul.lijst-item li.right {
@@ -445,7 +454,7 @@ ul.lijst-item li.right {
 }
 
 ul.lijst-item li.right .whats-the-count {
-  color: #7f8071;
+  color: var(--item-description);
   padding: 15px 0px 15px 15px;
   font-weight: 600;
   text-align: right;
@@ -465,7 +474,7 @@ ul.lijst-item li.bron img {
 }
 
 ul.lijst-item li.bron span {
-  color: #757575;
+  color: var(--item-description);
   font-size: .7em;
   display: block;
   text-align: center;
@@ -474,11 +483,12 @@ ul.lijst-item li.bron span {
 .item-action {
   padding: 0px 10px 10px 10px;  
 }
+
 .item-action input[type=text] {
-  background: #e1e1e1;
+  background: var(--main-bg-darker);
   font-size: 1em;
   outline: none;
-  color: var(--main-bg-font-dark);
+  color: var(--main-bg-darker-font);
   padding: 0px 10px 0px 10px;
   border-top-left-radius: 8px;
   border-bottom-left-radius: 8px;
@@ -549,10 +559,11 @@ ul.lijst-item li.bron span {
   border-bottom-right-radius: 8px;
   margin-left: 1px;
 }
+
 .lijst-item-placeholder {
   position: relative;
   height: 100px;
-  background: var(--main-placeholder-element);
+  background: var(--main-placeholder-bg);
   border-radius: 8px;
   margin-bottom: 10px;
   animation: fadeIn 1s;
@@ -562,7 +573,7 @@ ul.lijst-item li.bron span {
 .lijst-item-placeholder-small {
   position: relative;
   height: 75px;
-  background: var(--main-placeholder-element);
+  background: var(--main-placeholder-bg);
   border-radius: 8px;
   margin-bottom: 10px;
   animation: fadeIn 1.5s;
@@ -575,7 +586,7 @@ ul.lijst-item li.bron span {
   border-radius: 35px;
   margin-left: 15px;
   top: calc(50% - 21px);
-  background: #dedede;
+  background: var(--main-placeholder-bg2);
   position: absolute;
   animation: pulse 3500ms ease-in-out infinite;
 
@@ -588,7 +599,7 @@ ul.lijst-item li.bron span {
   text-align: center;
   font-size: 1.2em;
   left: calc(50% - 125px);
-  color: #131313;
+  color: var(--main-bg-darker-font);
   user-select: none;
   background: var(--main-bg);
   box-shadow: 0px 0px 50px 50px var(--main-bg);
@@ -596,20 +607,21 @@ ul.lijst-item li.bron span {
 
 .server-fout-placeholder {
   text-align: center;
-  color: #131313;
+  color: var(--main-bg-darker-font);
 }
+
 .server-fout-placeholder i {
-  color: #CCC;
+  color: var(--main-bg-darker-font);
   font-size: 13em;
 }
 .server-fout-placeholder h5 {
-  color: #CCC;
+  color: var(--main-bg-darker-font);
 }
 
 .box-wide {
   padding: 10px;
   font-size: 1.2em;
-  color: #131313;
+  color: var(--main-bg-darker-font);
   font-weight: 400;
   text-align: center;
   margin: 0px auto;
@@ -651,9 +663,9 @@ ul.lijst-item li.bron span {
 }
 
 @keyframes pulse {
-  0% {background: var(--main-placeholder-element); }
+  0% {background: var(--main-placeholder-bg); }
   50% {background: #dfdfdf;}
-  100% {background: var(--main-placeholder-element);}
+  100% {background: var(--main-placeholder-bg);}
 }
 
 @keyframes fadeIn {
