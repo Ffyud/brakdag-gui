@@ -5,6 +5,7 @@ import {
   Route,
   Link
 } from 'react-router-dom';
+import ThemeSetting from './theme-setting';
 
 class Footer extends Component {
   constructor(props) {
@@ -32,6 +33,7 @@ class Footer extends Component {
                 <li><Link to="/zoeken">Zoeken</Link></li>
               </ul>
             </div>
+            <ThemeSetting/>
         </footer>
       );
    }
