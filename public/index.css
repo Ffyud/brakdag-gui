@@ -518,6 +518,37 @@ ul.lijst-item li.bron span {
   100% { opacity: 0; padding: 0px 0px 0px 5px;}
 }
 
+#theme-setting {
+  margin: 15px;
+  text-shadow: none;
+}
+
+#theme-setting .theme-option {
+  color: var(--main-bg-font);
+  padding: 0px 10px 0px;
+  display: inline-block;
+  line-height: 35px;
+  vertical-align: middle;
+  cursor: pointer;
+  background-color: var(--main-bg);
+}
+
+#theme-setting .theme-option:hover{
+  background-color: var(--white);
+  color: var(--black);
+}
+
+#theme-setting .theme-option:first-child {
+  border-top-left-radius: 8px;
+  border-bottom-left-radius: 8px;
+  margin-right: 1px;
+}
+
+#theme-setting .theme-option:last-child {
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
+  margin-left: 1px;
+}
 .lijst-item-placeholder {
   position: relative;
   height: 100px;
