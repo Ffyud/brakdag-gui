@@ -9,6 +9,7 @@ class ZoekVeld extends Component {
             isLoaded: false,
             erWordtGezocht: false,
             resultaten: undefined,
+            // searchActiveCss: "search-passive",
             backgroundColor: "rgb(252, 251, 238)"
         };
     }
@@ -78,22 +79,20 @@ class ZoekVeld extends Component {
         const doeRustig = () => {
             if(this.state.updateInput !== '')
             {
-                this.setState({
-                    backgroundColor: "var(--white-transparent)",
-                    fontColor: "var(--head-green)"
-                });
+                // var zoek = document.getElementById('zoeken')
+                // zoek.removeAttribute('class')
+                // zoek.classList.add('search-passive');
             }
         }
 
         const doeActief = (event) => {
             event.target.select();
-            this.setState({
-                backgroundColor: "var(--floral-white)",
-                fontColor: "var(--black)"
-            });
+            // var zoek = document.getElementById('zoeken')
+            // zoek.removeAttribute('class')
+            // zoek.classList.add('search-active');
         }
         
-        return <div><input placeholder='Zoek naar nieuws' style={{ color: this.state.fontColor,backgroundColor: this.state.backgroundColor}} id='zoeken' type='text' onChange={handleInput} onKeyDown={handleKeyDown} onBlur={doeRustig} onFocus={doeActief}/></div>;
+        return <div><input placeholder='Zoek naar nieuws' id='zoeken' type='text' onChange={handleInput} onKeyDown={handleKeyDown} onBlur={doeRustig} onFocus={doeActief}/></div>;
     }
 }
 export default ZoekVeld;  
