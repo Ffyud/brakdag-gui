@@ -286,6 +286,7 @@ ul.header-lijst li #zoeken {
   background: var(--floral-white);
   color: var(--black);
   user-select: auto;
+  box-shadow: 0px 1px 2px -1px #00000078, 0px 2px 2px -2px #00000078;
 }
 ul.header-lijst li #zoeken::placeholder {
   font-size: .8em;
@@ -314,6 +315,8 @@ ul.header-lijst li #info, #bron-info, #datum-info {
   padding: 0px 5px 0px 5px;
   margin: 5px 0px 5px 0px;
   text-align: center;
+  box-shadow: 0px 1px 2px -1px #00000078, 0px 2px 2px -2px #00000078;
+  background: #ffffff0d;
 }
 
 ul.header-lijst li #info:hover, #bron-info:hover, #datum-info:hover {
