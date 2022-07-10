@@ -4,7 +4,7 @@ services:
     container_name: brakdag-react
     build: .
     ports:
-      - '1337:5000'
+      - '3000:5000'
     networks:
       - brakdag-network
   swag:
