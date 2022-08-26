@@ -3,14 +3,11 @@
   "version": "1.0.0",
   "private": true,
   "dependencies": {
-    "@nivo/core": "^0.66.0",
-    "@nivo/pie": "^0.66.0",
     "@testing-library/jest-dom": "^5.11.6",
     "@testing-library/react": "^11.1.2",
     "@testing-library/user-event": "^12.2.2",
     "localforage": "^1.10.0",
     "moment": "^2.29.1",
-    "nivo": "^0.31.0",
     "react": "^17.0.1",
     "react-datepicker": "^3.8.0",
     "react-dom": "^17.0.1",
@@ -20,7 +17,7 @@
     "web-vitals": "^0.2.4"
   },
   "scripts": {
-    "start": "NODE_PATH=src react-scripts start",
+    "start": "NODE_PATH=src NODE_OPTIONS=--openssl-legacy-provider react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
