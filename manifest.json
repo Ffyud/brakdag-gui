@@ -1,0 +1,29 @@
+{
+  "short_name": "Brakdag",
+  "name": "Brakdag",
+  "description": "De verzamelplek voor nieuws uit de stad Groningen.",
+  "categories": ["nieuws", "lokaal", "groningen", "stad"],
+  "icons": [
+    {
+      "src": "favicon.ico",
+      "sizes": "64x64 32x32 24x24 16x16",
+      "type": "image/x-icon"
+    },
+    {
+      "src": "android-icon-192x192.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "android-icon-512x512.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ],
+  "start_url": ".",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "lang": "nl",
+  "theme_color": "#4F6C51",
+  "background_color": "#EEE"
+}
