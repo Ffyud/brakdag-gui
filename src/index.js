@@ -1,11 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import BrakdagMenu from './menu';
 import 'remixicon/fonts/remixicon.css'
+import App from './App.tsx';
 
 ReactDOM.render(
   <React.StrictMode>
-    <BrakdagMenu />
+    <App />
   </React.StrictMode>,
   document.getElementById('root'),
 );

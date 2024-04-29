@@ -10,9 +10,6 @@ class BronPagina extends Component {
       isLoaded: false,
       bronTitle: null
     };
-
-    document.title = "Bron - Brakdag";
-
   }
 
   componentDidMount() {

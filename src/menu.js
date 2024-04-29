@@ -7,12 +7,11 @@ import {
 } from 'react-router-dom';
 import ZoekVeld from './zoek-veld.js';
 import ZoekPagina from './zoek-pagina.js';
-import HomePagina from './home-pagina.js';
-import DatumPagina from './datum-pagina.js';
+import App from './App.tsx';
 import BronPagina from './bron-pagina.js';
 import ItemsPagina from './items-pagina.js';
 import BronOverzichtPagina from './bron-overzicht-pagina.js';
-import Footer from './footer.js';
+import Footer from './components/footer.js';
 import ScrollToTop from './scroll-top.js';
 
 class BrakdagMenu extends Component{
@@ -62,16 +61,16 @@ class BrakdagMenu extends Component{
                 <Switch>
                     <Route exact path="/bron/:bronId" component={BronPagina} />
                     <Route exact path="/item/:itemId" component={ItemsPagina} />
-                    <Route exact path="/datum/:datumId" component={DatumPagina} />
+                    {/* <Route exact path="/datum/:datumId" component={DatumPagina} /> */}
                     <Route exact path="/">
                         <Thuis/>
                     </Route>    
                     <Route exact path="/bronnen">
                         <BronOverzichtPagina />
                     </Route>
-                    <Route exact path="/datum">
+                    {/* <Route exact path="/datum">
                         <DatumPagina/>
-                    </Route>
+                    </Route> */}
                     <Route exact path="/zoeken">
                         <ZoekPagina onZoekOpdracht={zoekResultaten} />
                     </Route>
@@ -88,6 +87,6 @@ export default BrakdagMenu;
 
 function Thuis() {
     return (
-        <HomePagina />
+        <App />
     );
 }
