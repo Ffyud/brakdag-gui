@@ -124,6 +124,7 @@ header span {
   grid-template-columns: 55px calc(100% - 55px);
   width: 100%;
   bottom: 0px;
+  padding-bottom: env(safe-area-inset-bottom);
 }
 
 .bottom-control .search-filter {
