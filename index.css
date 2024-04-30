@@ -65,7 +65,7 @@ header {
   padding-top: 15px;
   font-weight: 500;
   user-select: none;
-  font-size: 1.1em;
+  font-size: 1.5em;
   margin: 0px auto;
   z-index: 800;
 }
@@ -113,8 +113,7 @@ header span {
 
 .bottom-control {
   z-index: 900;
-  background: var(--secondary-bg);
-  font-size: var(--font-size-l);
+  background: var(--main-bg);
   position: fixed;
   display: grid;
   grid-template-columns: 55px calc(100% - 55px);
@@ -126,14 +125,15 @@ header span {
 .bottom-control .search-filter {
   display: grid;
   grid-template-rows: 50% 50%;
-  box-shadow: inset -2px 0px 0px 0px var(--main-bg);
+  box-shadow: inset -2px 0px 0px 0px var(--secondary-bg);
 }
 
 .bottom-control .search-filter button {
+  font-size: 1em;
   margin: 10px 10px 0px 10px;
   padding: var(--default-padding);
   border-radius: var(--default-radius);
-  background: var(--main-bg);
+  background: var(--secondary-bg);
 }
 
 .bottom-control .search-filter button:last-of-type {
@@ -154,9 +154,10 @@ header span {
 }
 
 .bottom-control .date-picker ul.month-pick li button {
+  font-size: 1em;
   padding: 5px 15px 5px 15px;
   border-radius: var(--default-radius);
-  background: var(--main-bg);
+  background: var(--secondary-bg);
 }
 
 .bottom-control .date-picker ul li button.current {
@@ -182,8 +183,8 @@ header span {
   margin-top: 10px;
   margin-bottom: 10px;
   padding: 5px 10px 5px 10px;
-  background: var(--main-bg);
-  box-shadow: inset 2px 0px 0px var(--secondary-bg), inset -2px 0px 0px var(--secondary-bg);
+  background: var(--secondary-bg);
+  box-shadow: inset 2px 0px 0px var(--main-bg), inset -2px 0px 0px var(--main-bg);
   grid-template-rows: 15px 1fr 1fr;
   min-width: 45px;
   display: grid;
@@ -198,7 +199,7 @@ header span {
 .bottom-control .date-picker ul.day-pick li:first-of-type button {
   border-top-left-radius: 8px;
   border-bottom-left-radius: 8px;
-  box-shadow: inset -2px 0px 0px var(--secondary-bg);
+  box-shadow: inset -2px 0px 0px var(--main-bg);
   margin-left: 10px;
 }
 .bottom-control .date-picker ul.day-pick li:last-of-type button {
