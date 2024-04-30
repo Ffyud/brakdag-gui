@@ -114,6 +114,7 @@ header span {
 .bottom-control {
   z-index: 900;
   background: var(--secondary-bg);
+  font-size: var(--font-size-l);
   position: fixed;
   display: grid;
   grid-template-columns: 55px calc(100% - 55px);
@@ -137,7 +138,6 @@ header span {
 
 .bottom-control .search-filter button:last-of-type {
   margin: 10px 10px 10px 10px;
-
 }
 
 .bottom-control .date-picker ul {
