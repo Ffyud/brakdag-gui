@@ -21,6 +21,7 @@
   --default-padding: 10px 10px 10px 10px;
 
   --default-radius: 8px;
+  --mini-radius: 2px;
 
   --font-size-s: .8em;
   --font-size-l: 1.2em;
@@ -185,6 +186,7 @@ header span {
   padding: 5px 10px 5px 10px;
   background: var(--secondary-bg);
   box-shadow: inset 2px 0px 0px var(--main-bg), inset -2px 0px 0px var(--main-bg);
+  border-radius: 2px;
   grid-template-rows: 15px 1fr 1fr;
   min-width: 45px;
   display: grid;
@@ -193,13 +195,13 @@ header span {
 
 .bottom-control .date-picker ul.day-pick li button.active {
   background: var(--main-bg);
-  box-shadow: inset 0px 0px 0px 2px var(--floral-white);
+  box-shadow: inset 0px 0px 0px 3px var(--floral-white) !important;
 }
 
 .bottom-control .date-picker ul.day-pick li:first-of-type button {
   border-top-left-radius: 8px;
   border-bottom-left-radius: 8px;
-  box-shadow: inset -2px 0px 0px var(--main-bg);
+  box-shadow: inset -2px 0px 0px 0px var(--main-bg);
   margin-left: 10px;
 }
 .bottom-control .date-picker ul.day-pick li:last-of-type button {
@@ -323,6 +325,7 @@ ul.item-lijst .description {
 }
 
 ul.item-lijst .timestamp {
+  padding-top: 5px;
   font-size: var(--font-size-s);
   text-align: center;
 }
