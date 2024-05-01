@@ -9,7 +9,7 @@
   --black: #f4f4f4;
 
   --main-bg: #1e2124;
-  --main-font: #d2d2d2;
+  --main-font: #e7e7e7;
   --secondary-bg: #353535;
 
   --main-bg-darker: #1C1C1C;
@@ -19,11 +19,13 @@
   --image-filter: grayscale(80%) opacity(80%);
 
   --default-padding: 10px 10px 10px 10px;
+  --default-space: 10px;
 
   --default-radius: 8px;
+  --mini-radius: 2px;
 
   --font-size-s: .8em;
-  --font-size-l: 1.2em;
+  --font-size-l: 1.1em;
 }
 
 html,
@@ -62,18 +64,35 @@ header {
   position: sticky;
   text-align: center;
   padding: var(--default-padding);
-  padding-top: 15px;
-  font-weight: 500;
   user-select: none;
-  font-size: 1.5em;
   margin: 0px auto;
   z-index: 800;
+  display: grid;
+  grid-template-columns: 50px auto 70px;
+  align-items: center;
 }
 
-header span {
+header .logo {
+  color: var(--floral-white);
+  font-family: Staatliches;
+  text-shadow: 0px 2px #000;
+  font-size: 3em;
+  display: inline;
+  line-height: 35px;
+  text-align: left;
+}
+
+header .date {
+  font-size: var(--font-size-l);
+  text-transform: lowercase;
+}
+
+header .tag {
+  background: var(--secondary-bg);
   font-size: var(--font-size-s);
-  padding: 0px 0px 0px 5px;
-  color: var(--main-font);
+  padding: var(--default-padding);
+  border-radius: var(--default-radius);
+  text-align: right;
 }
 
 .pagina-header-date-pick {
@@ -89,7 +108,7 @@ header span {
   font-weight: 500;
   user-select: none;
   animation: fadeIn 1s;
-  font-size: 1.1em;
+  font-size: var(--font-size-l);
   max-width: 690px;
   margin: 0px auto;
   z-index: 800;
@@ -185,6 +204,7 @@ header span {
   padding: 5px 10px 5px 10px;
   background: var(--secondary-bg);
   box-shadow: inset 2px 0px 0px var(--main-bg), inset -2px 0px 0px var(--main-bg);
+  border-radius: 2px;
   grid-template-rows: 15px 1fr 1fr;
   min-width: 45px;
   display: grid;
@@ -193,13 +213,13 @@ header span {
 
 .bottom-control .date-picker ul.day-pick li button.active {
   background: var(--main-bg);
-  box-shadow: inset 0px 0px 0px 2px var(--floral-white);
+  box-shadow: inset 0px 0px 0px 3px var(--floral-white) !important;
 }
 
 .bottom-control .date-picker ul.day-pick li:first-of-type button {
   border-top-left-radius: 8px;
   border-bottom-left-radius: 8px;
-  box-shadow: inset -2px 0px 0px var(--main-bg);
+  box-shadow: inset -2px 0px 0px 0px var(--main-bg);
   margin-left: 10px;
 }
 .bottom-control .date-picker ul.day-pick li:last-of-type button {
@@ -297,6 +317,10 @@ ul.item-lijst li {
   vertical-align: middle;
 }
 
+ul.item-lijst li:first-child { 
+  margin-top: 0px;
+}
+
 ul.item-lijst li .title {
   padding: var(--default-padding);
   user-select: text;
@@ -305,7 +329,7 @@ ul.item-lijst li .title {
 ul.item-lijst li .title a {
   cursor: pointer;
   font-weight: 600;
-  font-size: 1.1em;
+  font-size: var(--font-size-l);
   text-decoration: none;
   color: var(--main-font);
   word-wrap: anywhere;
@@ -323,6 +347,7 @@ ul.item-lijst .description {
 }
 
 ul.item-lijst .timestamp {
+  padding-top: 5px;
   font-size: var(--font-size-s);
   text-align: center;
 }
