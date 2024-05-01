@@ -7,7 +7,7 @@ interface HeaderProps {
 }
 
 const dayName = (index: number) => {
-    const names = ["Zondag", "Maandag", "Dinsdag", "Woensdag", "Donderdag", "Vrijdag", "Zaterdag"];
+    const names = ["zondag", "maandag", "dinsdag", "woensdag", "donderdag", "vrijdag", "zaterdag"];
     return names[index];
 };
 
@@ -23,8 +23,9 @@ const Header: React.FC<HeaderProps> = ({ date, items }): ReactElement => {
 
     return (
         <header>
-            {getHeaderDate(date)}
-            <span>{items.length} artikelen</span>
+            <div className="logo">BD</div>
+            <div className="date">{getHeaderDate(date)}</div>
+            <div className="tag">{items.length} artikelen</div>
         </header>
     );
 };
