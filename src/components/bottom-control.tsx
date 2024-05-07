@@ -75,7 +75,7 @@ const BottomControl: React.FC<BottomControlProps> = ({ selectDate }): ReactEleme
         setMonthList(list);
 
         // FIXME hardcoded een monthyear erin
-        setDaysList(daysListOfSelectedMonthYear({ month: 3, year: 2024 }));
+        setDaysList(daysListOfSelectedMonthYear(todayYearMonth));
     }, []);
 
     const onSelectMonthYear = (monthYear: MonthYear): void => {
